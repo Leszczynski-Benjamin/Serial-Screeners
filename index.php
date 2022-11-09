@@ -13,26 +13,28 @@
 </head>
 
 <body>
-<header>
+    <header>
         <div id="accueil_titre_principal">
-            <div class="accueil_titre_1"><p>Serial Screeners</p></div>
+            <div class="accueil_titre_1">
+                <p>Serial Screeners</p>
             </div>
         </div>
+        </div>
 
-    <nav>
-        <ul>
-            <li><a href="">Accueil</a></li>
-            <li><a href="./series.html">Séries</a></li>
-            <li><a href="./films.html">Films</a></li>
-            <li><a href="./espace.html">Mon espace</a></li>
-        </ul>
-    </nav>
-    
-    <div class="btn-account">
-        <a href="./compte.html"><i class="fa-solid fa-user-large"></i></a>
+        <nav>
+            <ul>
+                <li><a href="">Accueil</a></li>
+                <li><a href="./series.html">Séries</a></li>
+                <li><a href="./films.html">Films</a></li>
+                <li><a href="./espace.html">Mon espace</a></li>
+            </ul>
+        </nav>
+
+        <div class="btn-account">
+            <a href="./compte.html"><i class="fa-solid fa-user-large"></i></a>
     </header>
 
-    <div class="accueil-scotch"><img src="./yellow scotch.jpg"></div>
+    <div class="accueil-scotch"><img src="./img/yellow_scotch.jpg"></div>
 </body>
 
 </html>
