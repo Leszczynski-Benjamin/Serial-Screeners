@@ -2,11 +2,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  outline: none;
 }
 
-header {
+/* Code CSS correspondant au header ( Nom du site + navbar + Connexion/Inscription ) */
 
-  background-color: #060D17;
+header {
+  <<<<<<< HEAD background-color: #060D17;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
