@@ -32,7 +32,7 @@
         <a href="./compte.html"><i class="fa-solid fa-user-large"></i></a>
     </header>
 
-    <div class="accueil-scotch"><img src="./yellow scotch.jpg"></div>
+    <div class="accueil-scotch"><img src="./img/yellow scotch.jpg"></div>
 </body>
 
 </html>
