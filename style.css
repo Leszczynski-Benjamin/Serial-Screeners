@@ -16,7 +16,7 @@ header {
 
 @font-face {
   font-family: Scratched Letters;
-  src: url("./police/Scratched_Letters.ttf");
+  src: url("./Scratched\ Letters.ttf");
 }
 
 #accueil_titre_principal {
@@ -85,7 +85,7 @@ nav a:hover {
 }
 
 .accueil-scotch-top {
-  background-image: url(./serial\ screeners/img/yellow_scotch.jpg);
+  background-image: url(./img/yellow_scotch.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 0.8vh;
@@ -97,3 +97,147 @@ nav a:hover {
   background-size: cover;
   min-height: 0.8vh;
 }
+
+/* Fin code CSS Bannière Accueil */
+
+/* Début code CSS Carrousel Accueil */
+body {
+  margin: 0;
+  background: #060D17;
+  text-align: center;
+  font-family: 'Cormorant', serif;
+  color: #f0f0f0;
+}
+
+.container {
+  position: relative;
+  width: 320px;
+  margin: 3em auto 10em auto;
+  perspective: 1000px;
+}
+
+.carousel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  animation: rotate360 60s infinite forwards linear;
+}
+
+.carousel__face {
+  position: absolute;
+  width: 21vh;
+  height: 30vh;
+  top: 20px;
+  left: 10px;
+  right: 10px;
+  background-size: cover;
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+  display: flex;
+}
+
+.carousel__face:nth-child(1) {
+  background-image: url("./serial\ screeners/img/films/asterix_et_obelix_lempire_du_milieu.jpg");
+  transform: rotateY(0deg) translateZ(430px);
+}
+
+.carousel__face:nth-child(2) {
+  background-image: url("./serial\ screeners/img/series/andor.jpg");
+  transform: rotateY(40deg) translateZ(430px);
+}
+
+.carousel__face:nth-child(3) {
+  background-image: url("./serial\ screeners/img/films/avatar_la_voie_de_leau.jpg");
+  transform: rotateY(80deg) translateZ(430px);
+}
+
+.carousel__face:nth-child(4) {
+  background-image: url("./serial\ screeners/img/series/game_of_thrones_house_of_the_dragon.jpg");
+  transform: rotateY(120deg) translateZ(430px);
+}
+
+.carousel__face:nth-child(5) {
+  background-image: url("./serial\ screeners/img/films/black_panther_wakanda_forever.jpg");
+  transform: rotateY(160deg) translateZ(430px);
+}
+
+.carousel__face:nth-child(6) {
+  background-image: url("./serial\ screeners/img/series/le_seigneur_des_anneaux_les_anneaux_de_pouvoir.jpg");
+  transform: rotateY(200deg) translateZ(430px);
+}
+
+.carousel__face:nth-child(7) {
+  background-image: url("./serial\ screeners/img/films/top_gun_maverick.jpg");
+  transform: rotateY(240deg) translateZ(430px);
+}
+
+.carousel__face:nth-child(8) {
+  background-image: url("./serial\ screeners/img/series/westworld.jpg");
+  transform: rotateY(280deg) translateZ(430px);
+}
+
+.carousel__face:nth-child(9) {
+  background-image: url("./serial\ screeners/img/films/creed_3.jpg");
+  transform: rotateY(320deg) translateZ(430px);
+}
+
+@keyframes rotate360 {
+  from {
+    transform: rotateY(0deg);
+  }
+
+  to {
+    transform: rotateY(-360deg);
+  }
+}
+
+/* Fin code CSS Carrousel Accueil */
+
+/* Début code Footer*/
+footer {
+  width: 100%;
+  background: #041626;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Cormorant', serif;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 2em;
+}
+
+/* Fin code Footer*/
+
+/* Début code page Mentions légales*/
+.mentleg {
+  width: 80%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+#mentleg p {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#mentleg h1,
+h2 {
+  text-align: center;
+}
+
+.mentlega {
+  color: #f0f0f0;
+  z-index: 100;
+  font-family: 'Cormorant', serif;
+  font-weight: 600;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  text-align: justify;
+}
+
+/* Fin code page Mentions légales*/

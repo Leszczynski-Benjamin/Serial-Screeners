@@ -34,9 +34,42 @@
 
         <div class="btn-account">
             <a href="./compte.html"><i class="fa-solid fa-user-large"></i></a>
-    </header>
 
-    <div class="accueil-scotch"><img src="./img/yellow scotch.jpg"></div>
+    </header><!-- Fin du header, navbar et connexion inscription -->
+
+    <!-- Début bannière logo et slogan -->
+    <div id="accueil-banniere">
+        <div class="accueil-scotch-top"></div>
+
+        <div id="accueil-slogo">
+            <div class="accueil-logo"> <img src="./serial screeners/img/logo.jpg" alt=""></div>
+            <div class="accueil-slogan"> <img src="./serial screeners/img/slogan.jpg"></div>
+        </div>
+
+        <div class="accueil-scotch-bottom"></div>
+    </div> <!-- Fin bannière logo et slogan -->
+
+    <!-- Début carrousel accueil -->
+    <div class="container">
+        <div class="carousel">
+            <div class="carousel__face"></div>
+            <div class="carousel__face"></div>
+            <div class="carousel__face"></div>
+            <div class="carousel__face"></div>
+            <div class="carousel__face"></div>
+            <div class="carousel__face"></div>
+            <div class="carousel__face"></div>
+            <div class="carousel__face"></div>
+            <div class="carousel__face"></div>
+        </div>
+    </div> <!-- Fin carrousel accueil -->
+
+    <footer>
+        <div class="mentleg">
+            <p><a href="./mentleg.html">Mentions légales</a> - Tous droits réservés © The DéléDevs</p>
+        </div>
+    </footer>
+
 </body>
 
 </html>
