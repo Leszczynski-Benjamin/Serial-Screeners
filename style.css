@@ -103,13 +103,12 @@ flex-wrap: wrap;
 /* Début code CSS Carrousel Accueil */
 body {
   margin: 0;
-  background: #060D17;
-  text-align: center;
+  background: #060D17;  
   font-family: 'Cormorant', serif;
   color: #f0f0f0;
 }
 
-.container {
+.container_carousel {
   position: relative;
   width: 320px;
   margin: 3em auto 10em auto;

@@ -1,6 +1,6 @@
 <?php
     require './database.php';
-
+    include './header.php';
         $req = $pdo->query('SELECT * FROM films');
         while ($data = $req->fetch()): 
         
@@ -26,7 +26,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container_fiche">
 <!--COLONNE DE GAUCHE, AFFICHE ET NOTE GENERALE DU FILM -->
         <div class="left">
             <img class="affiche" src="./img/films/pulp_fiction.jpg" alt="affiche">
@@ -135,5 +135,5 @@
 
 <?php
 endwhile;
-
+include './footer.php';
 ?>

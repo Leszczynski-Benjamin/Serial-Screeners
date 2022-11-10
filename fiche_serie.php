@@ -1,5 +1,6 @@
 <?php
     require './database.php';
+    include './header.php';
 
         $req = $pdo->query('SELECT * FROM series');
         while ($data = $req->fetch()): 
@@ -26,7 +27,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container_fiche">
 <!--COLONNE DE GAUCHE, AFFICHE ET NOTE GENERALE DE LA SÉRIE -->
         <div class="left">
             <img class="affiche" src="./img/series/game_of_thrones_house_of_the_dragon.jpg" alt="affiche">
@@ -135,5 +136,5 @@
 
 <?php
 endwhile;
-
+include './footer.php';
 ?>
