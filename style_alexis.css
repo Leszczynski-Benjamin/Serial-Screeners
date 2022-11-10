@@ -1,3 +1,5 @@
+/*RESET GENERAL*/
+
 *{
     margin: 0;
     padding: 0;
@@ -24,6 +26,7 @@ body{
     align-items: center;
 }
 
+/* LEFT_BIS EST UNIQUEMENT VISIBLE SUR MOBILE*/
 .left_bis{
     display: none;
 }
@@ -33,10 +36,7 @@ body{
     vertical-align: middle;  
 }
 
-.fa-star{
-    color:#FCF800;
-    padding-right:0.3em;    
-}
+/*BOX CONTIENT L'ETOILE (.fa-star) ET LA NOTE (.note) QUI FIGURENT SOUS L'AFFICHE*/
 
 .box{
     font-size: 2em;
@@ -44,6 +44,11 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;        
+}
+
+.fa-star{
+    color:#FCF800;
+    padding-right:0.3em;    
 }
 
 .note{
@@ -71,6 +76,8 @@ body{
     padding-bottom: 5vh;
 }
 
+/*infos acteurs, genre etc*/
+
 .container1{
     display: flex;
     flex-wrap: wrap;
@@ -93,6 +100,7 @@ body{
 .infos{
     color: #FCF800;
 }
+/*synopsis*/
 
 .description{
     color: white;
@@ -136,12 +144,6 @@ button{
 .noter{
     color: #D9D9D9;
 }
-
-/*.stars{
-width: 37%;
-margin: 0 auto;
-padding: 50px;
-}*/
 
 .avis{
     display: block;

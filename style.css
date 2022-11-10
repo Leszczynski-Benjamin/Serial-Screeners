@@ -16,7 +16,7 @@ header {
 
 @font-face {
   font-family: Scratched Letters;
-  src: url("./Scratched\ Letters.ttf");
+  src: url("./police/Scratched_Letters.ttf");
 }
 
 #accueil_titre_principal {
@@ -86,14 +86,14 @@ flex-wrap: wrap;
 }
 
 .accueil-scotch-top {
-  background-image: url(./serial\ screeners/img/yellow_scotch.jpg);
+  background-image: url(./img/yellow_scotch.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 0.8vh;
 }
 
 .accueil-scotch-bottom{
-  background-image: url(./serial\ screeners/img/yellow_scotch.jpg);
+  background-image: url(./img/yellow_scotch.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 0.8vh;
@@ -136,31 +136,31 @@ body {
 }
 
 .carousel__face:nth-child(1) {
-  background-image: url("./serial\ screeners/img/films/asterix_et_obelix_lempire_du_milieu.jpg");
+  background-image: url("./img/films/asterix_et_obelix_lempire_du_milieu.jpg");
   transform: rotateY(  0deg) translateZ(430px); }
 .carousel__face:nth-child(2) { 
-  background-image: url("./serial\ screeners/img/series/andor.jpg");
+  background-image: url("./img/series/andor.jpg");
     transform: rotateY( 40deg) translateZ(430px); }
 .carousel__face:nth-child(3) {
-  background-image: url("./serial\ screeners/img/films/avatar_la_voie_de_leau.jpg");
+  background-image: url("./img/films/avatar_la_voie_de_leau.jpg");
   transform: rotateY( 80deg) translateZ(430px); }
 .carousel__face:nth-child(4) {
-  background-image: url("./serial\ screeners/img/series/game_of_thrones_house_of_the_dragon.jpg");
+  background-image: url("./img/series/game_of_thrones_house_of_the_dragon.jpg");
   transform: rotateY(120deg) translateZ(430px); }
 .carousel__face:nth-child(5) { 
-  background-image: url("./serial\ screeners/img/films/black_panther_wakanda_forever.jpg");
+  background-image: url("./img/films/black_panther_wakanda_forever.jpg");
  transform: rotateY(160deg) translateZ(430px); }
 .carousel__face:nth-child(6) { 
-  background-image: url("./serial\ screeners/img/series/le_seigneur_des_anneaux_les_anneaux_de_pouvoir.jpg");
+  background-image: url("./img/series/le_seigneur_des_anneaux_les_anneaux_de_pouvoir.jpg");
  transform: rotateY(200deg) translateZ(430px); }
 .carousel__face:nth-child(7) { 
-  background-image: url("./serial\ screeners/img/films/top_gun_maverick.jpg");
+  background-image: url("./img/films/top_gun_maverick.jpg");
  transform: rotateY(240deg) translateZ(430px); }
 .carousel__face:nth-child(8) {
-  background-image: url("./serial\ screeners/img/series/westworld.jpg");
+  background-image: url("./img/series/westworld.png");
   transform: rotateY(280deg) translateZ(430px); }
 .carousel__face:nth-child(9) {
-  background-image: url("./serial\ screeners/img/films/creed_3.jpg");
+  background-image: url("./img/films/creed_3.jpg");
   transform: rotateY(320deg) translateZ(430px); }
 
 @keyframes rotate360 {

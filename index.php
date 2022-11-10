@@ -41,8 +41,8 @@
     <div class="accueil-scotch-top"></div>
 
     <div id="accueil-slogo">
-        <div class="accueil-logo"> <img src="./serial screeners/img/logo.jpg" alt=""></div>
-        <div class="accueil-slogan"> <img src="./serial screeners/img/slogan.jpg"></div>
+        <div class="accueil-logo"> <img src="./img/logo.jpg" alt=""></div>
+        <div class="accueil-slogan"> <img src="./img/slogan.jpg"></div>
     </div>
 
     <div class="accueil-scotch-bottom"></div>

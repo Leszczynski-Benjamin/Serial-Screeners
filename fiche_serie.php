@@ -25,53 +25,60 @@
   
 </head>
 
-
 <body>
     <div class="container">
+<!--COLONNE DE GAUCHE, AFFICHE ET NOTE GENERALE DE LA SÉRIE -->
         <div class="left">
             <img class="affiche" src="./img/series/game_of_thrones_house_of_the_dragon.jpg" alt="affiche">
             
                 <h4 class="box">
                     <i class="fa-solid fa-star"></i>
-                    <div class="note"><?= $data->note?></div>
+                    <div class="note">
+                        <?= $data->note?>
+                    </div>
                 </h4> 
-                
-                       
         </div>
+<!-- COLONNE DE DROITE, TITRE ET INFOS DIVERSES -->
         <div class="right">
-                <h3 class="titre"><?= $data->titre?></h3>              
+                <h3 class="titre">
+                    <?= $data->titre?>
+                </h3>              
                 
-                
-                     <?php
-                        $original = $data->titre_original;
+                <?php
+                    $original = $data->titre_original;
 
-                        if ($original!=NULL){
-                            echo '<h4 class="original">Titre original: ' . $original.'</h4>';
+                    if ($original!=NULL){
+                        echo '<h4 class="original">Titre original: ' . $original.'</h4>';
                             
-                        }
-                        ?>
-                
+                    }
+                ?>
+ <!-- SECTION LEFT BIS N'APPARAIT QUE SUR LA VERSION MOBILE, C'EST L'AFFICHE ET LA NOTE LORSQU'ELLES S'INTERCALENT ENTRE LE TITRE ET LES INFOS DIVERSES -->               
                 <div class="left_bis">
-            <img class="affiche" src="./img/series/game_of_thrones_house_of_the_dragon.jpg" alt="affiche">
-            
-                <h4 class="box">
-                    <i class="fa-solid fa-star"></i>
-                    <div class="note"><?= $data->note?></div>
-                </h4> 
-                
-                       
-        </div>
-               
-               
-                    <div class="container1">
-                        <div class="left1">
-                            <h5 class="cast">Showrunner(s): <?= $data->showrunners?></h5>
-                            <h5 class="cast">Acteurs principaux: <?= $data->acteurs_principaux?></h5>
+                    <img class="affiche" src="./img/series/game_of_thrones_house_of_the_dragon.jpg" alt="affiche">
+                    <h4 class="box">
+                        <i class="fa-solid fa-star"></i>
+                        <div class="note">
+                            <?= $data->note?>
                         </div>
-                        <div class="right1">
-                            <h5 class="infos">Genre: <?= $data->genre?></h5>            
-                            <h5 class="infos"><?= $data->date_premier_episode?>
-                                
+                    </h4> 
+                </div>
+  <!-- CONTAINER1 CORRESPOND AUX INFOS SHOWRUNNERS, GENRE ETC DIVISÉ EN DEUX COLONNES LEFT1 ET RIGHT1  -->            
+                <div class="container1">
+                    <div class="left1">
+                        <h5 class="cast">Showrunner(s): 
+                            <?= $data->showrunners?>
+                        </h5>
+                        <h5 class="cast">Acteurs principaux: 
+                            <?= $data->acteurs_principaux?>
+                        </h5>
+                    </div>
+                    <div class="right1">
+                        <h5 class="infos">Genre: 
+                            <?= $data->genre?>
+                        </h5>            
+                        <h5 class="infos">
+                            <?= $data->date_premier_episode?>
+
                             <?php
                         $final = $data->date_dernier_episode;
 
@@ -81,21 +88,24 @@
                         ?>
                         
                         </h5>            
-                            <h5 class="infos">Nombre de saison(s): <?= $data->saisons?></h5>            
-                        </div>
+                            <h5 class="infos">Nombre de saison(s): 
+                                <?= $data->saisons?>
+                            </h5>            
                     </div>
-                <p class="description"><?= $data->synopsis?></p>
+                </div>
+<!-- SYNOPSIS, BOUTON AJOUTER A LA LISTE ET LIEN DE DIFFUSION  -->
+                <p class="description">
+                    <?= $data->synopsis?>
+                </p>
                 
-                    <div class="bouton">
-                        <button ><i class="fa-solid fa-circle-plus"></i>  Ajouter à ma liste</button>
-                    </div>
-                    <div class="diffusion">
-                        <a class="lien" href="<?= $data->diffusion?>">Où visionner cette série?</a>
-                    </div>
-                    
-                    
-                
+                <div class="bouton">
+                    <button ><i class="fa-solid fa-circle-plus"></i>  Ajouter à ma liste</button>
+                </div>
+                <div class="diffusion">
+                    <a class="lien" href="<?= $data->diffusion?>">Où visionner cette série?</a>
+                </div>
         </div>
+<!-- SECTION AVIS, SECONDE PARTIE DE LA PAGE, AVEC LES 5 ETOILES POUR NOTER ET UN FORMULAIRE POUR LAISSER UN COMMENTAIRE -->
 
         <div class="titre_avis">                
             <h2>Avis</h2>
