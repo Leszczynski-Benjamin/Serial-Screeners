@@ -643,7 +643,7 @@ h2 {
   text-align: center;
 }
 
-button {
+.button {
   margin: 5vh auto;
   cursor: pointer;
   height: 5vh;
@@ -695,6 +695,7 @@ button {
   border: none;
   padding: 5px 5px;
   margin-bottom: 5px;
+  margin: 30px 0 10px 0;
   cursor: pointer;
   transition: all 0.6s ease;
 }

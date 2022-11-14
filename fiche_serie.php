@@ -98,7 +98,7 @@ while ($data = $req->fetch()) :
                 </p>
 
                 <div class="bouton">
-                    <button><i class="fa-solid fa-circle-plus"></i> Ajouter à ma liste</button>
+                    <button class="button"><i class="fa-solid fa-circle-plus"></i> Ajouter à ma liste</button>
                 </div>
                 <div class="diffusion">
                     <a class="lien" href="<?= $data->diffusion ?>">Où visionner cette série?</a>

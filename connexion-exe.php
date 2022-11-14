@@ -21,13 +21,12 @@ if (isset($_POST['submit'])) {
             $_SESSION['user_kind'] = $result['user_kind'];
             $_SESSION['ID'] = $result['ID'];
             if ($_SESSION['user_kind'] == 1) {
-                header('location: index.php');
+                header('location: fiche_film.php');
             } else {
-                header('location: index.php');
+                header('location: fiche_film.php');
             }
         } else {
-            echo 'arf!';
-            header('location: index.php');
+            header('location: index.php#overlay');
         }
     }
 }
