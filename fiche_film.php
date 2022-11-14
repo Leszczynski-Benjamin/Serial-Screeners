@@ -111,46 +111,15 @@ while ($data = $req->fetch()) :
                         <button class="bouton" type="submit" class="poster">Soumettre</button>
                     </form>
                 </div>
-<<<<<<< HEAD
-
+                <div class="titre_avis">
+                    <h2>Avis</h2>
+                </div>
             </div>
 
 
     </body>
 
     </html>
-=======
-        </div>
-
-<!-- SECTION AVIS, SECONDE PARTIE DE LA PAGE, AVEC LES 5 ETOILES POUR NOTER ET UN FORMULAIRE POUR LAISSER UN COMMENTAIRE -->
-
-        <div class="titre_avis">                
-            <h2>Avis</h2>
-        </div>
-        
-        <div class="avis">
-            <div class="stars">
-                <p class="noter">Donner une note</p>
-                <i class="fa-solid fa-star"></i>               
-                <i class="fa-solid fa-star"></i>               
-                <i class="fa-solid fa-star"></i>               
-                <i class="fa-regular fa-star"></i>               
-                <i class="fa-regular fa-star"></i>
-            </div>               
-            <form action="com_exe.php" method="post">                
-                    <textarea class="commentaire" name="com" id="com" cols="70" rows="10" placeholder="Postez un avis ici..."></textarea>
-                    <button class="bouton" type="submit" class="poster">Soumettre</button>                
-            </form>
-            <p>coucou</p>
-        </div> 
-
-    </div> 
-
-    
-</body>
-
-</html>
->>>>>>> cb7735a1d50e088d23caf654bdeb1722f6545db6
 
 <?php
 endwhile;
