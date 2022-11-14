@@ -120,7 +120,7 @@ while ($data = $req->fetch()) :
                 </div>
                 <form action="com_exe.php" method="post">
                     <textarea class="commentaire" name="com" id="com" cols="70" rows="10" placeholder="Postez un avis ici..."></textarea>
-                    <button class="bouton" type="submit" class="poster">Soumettre</button>
+                    <button class="bouton-jaune" type="submit" class="poster">Soumettre</button>
                 </form>
             </div>
 

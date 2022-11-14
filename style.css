@@ -8,7 +8,7 @@
 /* Code CSS correspondant au header ( Nom du site + navbar + Connexion/Inscription ) */
 
 header {
-  <<<<<<< HEAD background-color: #060D17;
+  background-color: #060D17;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -31,6 +31,12 @@ header {
   color: #f0f0f0;
   font-family: "Scratched Letters", sans-serif;
 }
+
+.accueil_titre_1 a {
+  text-decoration: none;
+  color: #f0f0f0;
+}
+
 
 nav ul {
   list-style-type: none;
@@ -192,6 +198,213 @@ body {
 
 /* Fin code CSS Carrousel Accueil */
 
+/* -------------------------- POPUP INSCRIPTION/CONNEXION ------------------------------ */
+
+/* Overlay */
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.105);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  color: white;
+  visibility: hidden;
+  transition: opacity 0.4s;
+  opacity: 0;
+  z-index: 3;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Popup espace connexion */
+
+#popup,
+#popup-2 {
+  background: #0D1726;
+  height: 60vh;
+  width: 30vw;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+#linkBtnClose {
+  color: white;
+  text-decoration: none;
+}
+
+#linkBtnClose:hover {
+  color: #DCC12C;
+  transition: color 0.6s ease;
+}
+
+#btnClose {
+  width: 95%;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#popup h2 {
+  margin-top: 0;
+  font-weight: 100;
+  color: #DCC12C;
+  font-size: 18px;
+}
+
+#popup p {
+  margin-top: 0;
+}
+
+#popup label {
+  color: #C6E0E0;
+  font-size: 12px;
+}
+
+#popup h2,
+p,
+form {
+  text-align: center;
+}
+
+#popup input {
+  margin: 0 0 10px 0;
+  background-color: #D9D9D9;
+  border: none
+}
+
+#popup input[type=password],
+#popup input[type=text] {
+  margin-top: 5px;
+}
+
+#popup-2 {
+  transform: translateY(145px);
+}
+
+
+#link-lose-password {
+  color: #C6E0E0;
+}
+
+#link-lose-password:hover {
+  color: white;
+  transition: color 0.6s ease;
+}
+
+#create-account {
+  background-color: #D9D9D9;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+#create-account:hover a {
+  background-color: #0D1726;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.link-create-account {
+  text-decoration: none;
+  color: black;
+  background-color: #D9D9D9;
+  font-weight: 300;
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 5px 0px;
+  transition: all 1s ease;
+  border: none;
+}
+
+#link-create-account:hover,
+#link-connexion-account:hover {
+  background-color: #0D1726;
+  color: white;
+  transition: all 1s ease;
+  cursor: pointer;
+}
+
+/* Popup espace inscription */
+
+.box-inscription {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#link-inscription {
+  background: #DCC12C;
+  border: none;
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  transition: all 0.6s ease;
+}
+
+#link-inscription-2 {
+  transform: scale(0.96);
+  transition: all 0.3s ease;
+}
+
+#link-connexion {
+  background: #DCC12C;
+  border: none;
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  transition: all 0.6s ease;
+}
+
+#link-connexion:hover,
+#link-inscription:hover {
+  transform: scale(0.96);
+  transition: all 0.3s ease;
+}
+
+/*  Scotch de la fenêtre pop-up */
+
+#scotch-1 {
+  position: absolute;
+  transform: rotate(145deg);
+  height: 15px;
+  left: -211px;
+  top: -8px;
+  z-index: 1;
+}
+
+#scotch-2 {
+  position: absolute;
+  transform: rotate(145deg);
+  height: 16px;
+  right: -211px;
+  bottom: -23px;
+  z-index: 1;
+}
+
+/* Media queries */
+
+@media screen and (min-width: 320px) and (max-width: 769px) {
+
+  #popup,
+  #popup-2 {
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+/* -------------------------- FIN POPUP INSCRIPTION/CONNEXION ------------------------------ */
+
 /* Début code Footer*/
 footer {
   width: 100%;
@@ -217,6 +430,11 @@ footer {
   justify-content: center;
 }
 
+.mentleg a {
+  text-decoration: none;
+  color: #FCF800;
+}
+
 #mentleg p {
   margin-left: 20px;
   margin-right: 20px;
@@ -240,3 +458,367 @@ h2 {
 }
 
 /* Fin code page Mentions légales*/
+
+/* ----------------------------- Page MON ESPACE ------------------------------*/
+
+#filtres,
+#sous-filtres {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  color: #D9D9D9;
+  margin-bottom: 30px;
+}
+
+#filtres li,
+#sous-filtres li {
+  margin-right: 20px;
+}
+
+#filtres li:hover,
+#sous-filtres li:hover {
+  color: #FCF800;
+  cursor: pointer;
+  transition: color 1s ease;
+}
+
+#container-espace {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: repeat(4, 160px);
+  grid-auto-rows: 260px;
+  gap: 5px;
+  height: 100vh;
+  overflow-y: scroll;
+  padding-right: 10px;
+}
+
+#grid::-webkit-scrollbar {
+  background-color: #dedede;
+  width: 10px;
+}
+
+#grid::-webkit-scrollbar {
+  background-color: #757575;
+}
+
+.grid-item {
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.grid-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+
+.grid-item:hover #overlay {
+  bottom: 0;
+}
+
+.grid-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+
+/* ----------------------------- FIN Page MON ESPACE ------------------------------*/
+
+/* ----------------------------- FICHES -----------------------------------------*/
+
+.container_fiche {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.left {
+  width: 40%;
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* LEFT_BIS EST UNIQUEMENT VISIBLE SUR MOBILE*/
+.left_bis {
+  display: none;
+}
+
+.affiche {
+  width: 30vw;
+  vertical-align: middle;
+}
+
+/*BOX CONTIENT L'ETOILE (.fa-star) ET LA NOTE (.note) QUI FIGURENT SOUS L'AFFICHE*/
+
+.box {
+  font-size: 2em;
+  padding-top: 0.6em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa-star {
+  color: #FCF800;
+  padding-right: 0.3em;
+}
+
+.note {
+  padding-bottom: 0.3em;
+  color: #D9D9D9;
+
+}
+
+.right {
+  width: 60%;
+  margin-top: 10vh;
+
+}
+
+.titre {
+  color: #FCF800;
+  font-size: 1.7em;
+  text-align: center;
+  padding-bottom: 3vh;
+}
+
+.original {
+  color: white;
+  padding-left: 12vw;
+  padding-bottom: 5vh;
+}
+
+/*infos acteurs, genre etc*/
+
+.container1 {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.left1 {
+  width: 67%;
+  padding-bottom: 5vh;
+}
+
+.right1 {
+  width: 33%;
+  padding-bottom: 5vh;
+}
+
+.cast {
+  color: #FCF800;
+  padding-left: 12vw;
+}
+
+.infos {
+  color: #FCF800;
+}
+
+/*synopsis*/
+
+.description {
+  color: white;
+  font-size: 1.5em;
+  text-align: justify;
+  padding: 0 12vw;
+}
+
+
+.bouton {
+  text-align: center;
+}
+
+button {
+  margin: 5vh auto;
+  cursor: pointer;
+  height: 5vh;
+  width: 12vw;
+  border-radius: 0.7em;
+  background-color: #D9D9D9;
+}
+
+
+
+.diffusion {
+  width: 100%;
+  text-align: center;
+}
+
+.lien {
+  color: #FCF800;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.titre_avis {
+  color: #D9D9D9;
+  width: 100%;
+  text-align: center;
+  padding-top: 3em;
+  font-size: 1.5em;
+}
+
+.noter {
+  color: #D9D9D9;
+}
+
+.avis {
+  display: block;
+  margin-top: 5vh;
+  width: 100%;
+  text-align: center;
+}
+
+.commentaire {
+  display: block;
+  margin: auto;
+}
+
+.bouton-jaune {
+  width: 10vw;
+  background: #DCC12C;
+  border: none;
+  padding: 5px 5px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  transition: all 0.6s ease;
+}
+
+/* TABLETTE */
+
+@media screen and (max-width: 769px) {
+
+  .left {
+    margin-top: 5vh;
+  }
+
+  .box {
+    font-size: 1.5em;
+  }
+
+  .description {
+    font-size: 1em;
+    padding: 0 8vw;
+  }
+
+  .cast {
+    padding-left: 8vw;
+  }
+
+  .left1 {
+    width: 55%;
+    font-size: 0.8em;
+  }
+
+  .right1 {
+    width: 45%;
+    font-size: 0.8em;
+    padding-left: 5vw;
+  }
+
+  .titre {
+    font-size: 1.5em;
+  }
+
+  .original {
+    padding-left: 8vw;
+  }
+
+  .lien {
+    font-size: 1em;
+  }
+
+  .titre_avis {
+    font-size: 1.2em;
+  }
+
+  .stars {
+    font-size: 0.8em;
+  }
+
+  .commentaire {
+    width: 50%;
+  }
+
+}
+
+/*MOBILE*/
+
+@media screen and (max-width: 421px) {
+
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .right {
+    width: 100%;
+    margin-top: 2vh;
+
+  }
+
+  .left {
+    display: none;
+  }
+
+  .left_bis {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .titre {
+    font-size: 1.4em;
+    padding-bottom: 5vw;
+    margin: 0 10vw;
+  }
+
+  .original {
+    padding-left: 0;
+    margin: 0 10vw;
+    text-align: center;
+  }
+
+  .affiche {
+    width: 60vw;
+
+  }
+
+  .box {
+    font-size: 1.2em;
+    padding: 0.2em 0 1em;
+  }
+
+  .stars {
+    font-size: 0.6em;
+  }
+
+  .commentaire {
+    width: 70%;
+    height: 10vh;
+  }
+
+
+}
+
+/* ----------------------------------- FIN FICHES ---------------------------------------------- */
