@@ -34,12 +34,33 @@ function popup1() {
 // Appelle de la fonction popup2 lors de l'evenement 
 window.addEventListener("resize", popup2);
 
-// TEST MDP OUBLIER
+// Apparition du formulaire envoie de token
+
+let clicked = false;
 
 function losePassword() {
-    document.getElementById("form-lose-password").style.visibility = "visible";
-    document.getElementById("form-lose-password").style.opacity = "1";
-    document.getElementById("form-lose-password").style.transition = "opacity 1s ease";
+
+    document.getElementById("form-lose-password").style.transition = "all .5s ease";
+    document.getElementById("form-lose-password").style.opacity = (clicked) ? "0" : "1";
+    document.getElementById("form-lose-password").style.visibility = (clicked) ? "hidden" : "visible";
+    clicked = !clicked;
 }
 
+/*
+Equivaut à
+
+if (clicked) {
+    document.getElementById("form-lose-password").style.opacity = "0";
+    document.getElementById("form-lose-password").style.visibility = "hidden";
+
+    
+} else {
+    document.getElementById("form-lose-password").style.opacity = "1";
+    document.getElementById("form-lose-password").style.visibility = "visible";
+} 
+*/
+
 window.addEventListener("onclick", losePassword);
+
+
+
