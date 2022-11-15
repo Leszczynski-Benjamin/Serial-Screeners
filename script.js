@@ -16,7 +16,7 @@ function popup2() {
         document.getElementById("popup-2").style.transition = "transform 1s ease";
         // Responsive de la popup pour les écrans en dessous de 1440px
     } else if (media1440.matches) {
-        document.getElementById("popup-2").style.transform = "translateY(-90%)";
+        document.getElementById("popup-2").style.transform = "translateY(-88%)";
         document.getElementById("popup-2").style.transition = "transform 1s ease";
         // Responsive de la popup pour les autres écrans au dessus de 1440px
     } else {
@@ -33,3 +33,13 @@ function popup1() {
 
 // Appelle de la fonction popup2 lors de l'evenement 
 window.addEventListener("resize", popup2);
+
+// TEST MDP OUBLIER
+
+function losePassword() {
+    document.getElementById("form-lose-password").style.visibility = "visible";
+    document.getElementById("form-lose-password").style.opacity = "1";
+    document.getElementById("form-lose-password").style.transition = "opacity 1s ease";
+}
+
+window.addEventListener("onclick", losePassword);

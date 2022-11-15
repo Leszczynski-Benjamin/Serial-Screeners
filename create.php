@@ -4,6 +4,7 @@
     // Upload d'images vers la base de donnés
     echo '<h2> Uploader une affiche de série</h2>
           <form method="POST" enctype="multipart/form-data">
+            <input type="text" name="titre"/><br>
             <input type="file" name="affiche"/><br><br>
             <input type="submit" value="Envoyez l\'affiche"/>
           </form><br>';

@@ -55,7 +55,12 @@
                     <label for="user_password">Mot de passe</label> <br>
                     <input type="password" name="user_password" id="user_password"> <br>
                     <button id="link-connexion" type="submit" name="submit">Me connecter</button> <br>
-                    <a href="" id="link-lose-password">J'ai oublié mon mot de passe</a>
+                </form>
+                <div id="link-lose-password" onclick="losePassword()">J'ai oublié mon mot de passe</div>
+                <form id="form-lose-password" action="inscription-exe.php" method="post">
+                    <label for="email">Adresse e-mail :</label><br>
+                    <input type="email" name="email" id="user_email" required><br>
+                    <button id="link-connexion" type="submit" name="submit">Envoyez un lien de connexion</button> <br>
                 </form>
             </div>
             <!-- Lien pour accéder à la Popup inscription -->
