@@ -400,7 +400,10 @@ form {
   z-index: 1;
 }
 
+/* -------------------------- FIN POPUP INSCRIPTION/CONNEXION ------------------------------ */
 /*--------------------------------------- Media queries -----------------------------------------------*/
+
+
 
 @media screen and (min-width: 320px) and (max-width: 769px) {
 
@@ -408,6 +411,24 @@ form {
   #popup-2 {
     width: 100vw;
     height: 100vh;
+  }
+}
+
+/* Responsive en dessous de 1440px */
+
+@media screen and (max-width:1440px) {
+  #grid {
+    grid-template-columns: repeat(5, 160px);
+
+  }
+}
+
+/* Responsive en dessous de 1024px */
+
+@media screen and (max-width:1024px) {
+  #grid {
+    grid-template-columns: repeat(4, 160px);
+
   }
 }
 
@@ -457,6 +478,11 @@ form {
   .carousel__face:nth-child(9) {
     background-image: url("./img/films/creed_3.jpg");
     transform: rotateY(320deg) translateZ(350px);
+  }
+
+  #grid {
+    grid-template-columns: repeat(3, 160px);
+
   }
 }
 
@@ -509,11 +535,14 @@ form {
     background-image: url("./img/films/creed_3.jpg");
     transform: rotateY(320deg) translateZ(325px);
   }
+
+  #grid {
+    grid-template-columns: repeat(2, 160px);
+
+  }
 }
 
-/*--------------------------------------- Media queries -----------------------------------------------*/
-
-/* -------------------------- FIN POPUP INSCRIPTION/CONNEXION ------------------------------ */
+/*---------------------------------------  FIN Media queries -----------------------------------------------*/
 
 /* Début code Footer*/
 footer {
@@ -574,7 +603,12 @@ h2 {
   justify-content: center;
   list-style-type: none;
   color: #D9D9D9;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+#filtres {
+  margin-top: 40px;
 }
 
 #filtres li,
@@ -587,6 +621,35 @@ h2 {
   color: #FCF800;
   cursor: pointer;
   transition: color 1s ease;
+}
+
+#sous-filtres~a {
+  margin: 0 auto;
+}
+
+#box-btn-submit {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+
+#btn-submit {
+  font-weight: bold;
+  padding: 10px;
+  text-decoration: none;
+  color: #D9D9D9;
+  transition: all 0.5s ease-out;
+  box-shadow: inset #FCF800 0 0;
+  border: 1px solid #FCF800;
+
+}
+
+#btn-submit:hover {
+  transition: all 1.3s ease;
+  box-shadow: inset #FCF800 0 -200px;
+  color: black;
 }
 
 #container-espace {

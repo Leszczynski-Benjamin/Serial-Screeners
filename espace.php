@@ -23,10 +23,13 @@ include 'header.php';
         <li>Films</li>
     </ul>
     <ul id="sous-filtres">
-        <li>Listes des programmes</li>
+        <li>Listes des programmes :</li>
         <li>Vues (0)</li>
         <li>À voir (0)</li>
     </ul>
+    <div id="box-btn-submit">
+        <a href="#" id="btn-submit">Soumettez vos idées de films/séries</a>
+    </div>
     <div id="container-espace">
         <div id="grid">
             <?php
