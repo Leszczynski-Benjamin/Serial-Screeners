@@ -6,30 +6,13 @@ while ($data = $req->fetch()) :
 
 ?>
 
-    <!DOCTYPE html>
-    <html lang="fr">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="">
-
-        <link rel="stylesheet" href="./style_alexis.css">
-        <script src="https://kit.fontawesome.com/6d9b9bcbc0.js" crossorigin="anonymous"></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-
-        <title>Fiche film</title>
-
-    </head>
-
     <body>
         <div class="container_fiche">
             <!--COLONNE DE GAUCHE, AFFICHE ET NOTE GENERALE DU FILM -->
             <div class="left">
-                <img class="affiche" src="./img/films/pulp_fiction.jpg" alt="affiche">
-
+                <img class="affiche" src=<?= $data->affiche ?> alt="affiche">
+                
+                
                 <h4 class="box">
                     <i class="fa-solid fa-star"></i>
                     <div class="note">

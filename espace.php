@@ -38,7 +38,7 @@ include 'header.php';
             while ($data = $req->fetch()) {
             ?>
                 <div class="grid-item">
-                    <img src="./img/<?= $data->image ?>" alt="" height="260px" width="160px">
+                    <img src="./img/<?= $data->affiche ?>" alt="" height="260px" width="160px">
                 </div>
             <?php
             }
