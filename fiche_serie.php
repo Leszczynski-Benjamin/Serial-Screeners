@@ -5,13 +5,14 @@ include './header.php';
 $req = $pdo->query('SELECT * FROM series');
 while ($data = $req->fetch()) :
 
+$affiche = "./img/" . $data->affiche;
 ?>
 
     <body>
         <div class="container_fiche">
             <!--COLONNE DE GAUCHE, AFFICHE ET NOTE GENERALE DE LA SÉRIE -->
             <div class="left">
-                <img class="affiche" src="./img/series/game_of_thrones_house_of_the_dragon.jpg" alt="affiche">
+                <img class="affiche" src="<?php echo $affiche?>" alt="affiche">
 
                 <h4 class="box">
                     <i class="fa-solid fa-star"></i>
@@ -34,8 +35,9 @@ while ($data = $req->fetch()) :
                 }
                 ?>
                 <!-- SECTION LEFT BIS N'APPARAIT QUE SUR LA VERSION MOBILE, C'EST L'AFFICHE ET LA NOTE LORSQU'ELLES S'INTERCALENT ENTRE LE TITRE ET LES INFOS DIVERSES -->
+                
                 <div class="left_bis">
-                    <img class="affiche" src="./img/logo.jpg" alt="affiche">
+                    <img class="affiche" src="<?php echo $affiche?>" alt="affiche">
                     <h4 class="box">
                         <i class="fa-solid fa-star"></i>
                         <div class="note">

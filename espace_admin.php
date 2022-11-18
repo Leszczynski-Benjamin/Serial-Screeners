@@ -45,8 +45,3 @@ while($data = $req->fetch()){
 </body>
 
 </html>
-<?php
-
-include 'footer.php';
-
-?>

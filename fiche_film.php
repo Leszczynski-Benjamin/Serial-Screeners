@@ -1,13 +1,11 @@
 <?php
 require './database.php';
 include './header.php';
+
 $req = $pdo->query('SELECT * FROM films');
 while ($data = $req->fetch()) :
 
-?>
-
-<?php
-    $affiche = "./img/" . $data->affiche;
+$affiche = "./img/" . $data->affiche;
 ?>
 
     <body>
@@ -15,7 +13,6 @@ while ($data = $req->fetch()) :
             <!--COLONNE DE GAUCHE, AFFICHE ET NOTE GENERALE DU FILM -->
             <div class="left">
                 <img class="affiche" src="<?php echo $affiche?>" alt="affiche">
-                
                 
                 <h4 class="box">
                     <i class="fa-solid fa-star"></i>
@@ -38,10 +35,6 @@ while ($data = $req->fetch()) :
                 }
                 ?>
                 <!-- SECTION LEFT BIS N'APPARAIT QUE SUR LA VERSION MOBILE, C'EST L'AFFICHE ET LA NOTE LORSQU'ELLES S'INTERCALENT ENTRE LE TITRE ET LES INFOS DIVERSES -->
-
-                <?php
-                 $affiche = "./img/" . $data->affiche;
-                ?>
 
                 <div class="left_bis">
                     <img class="affiche" src="<?php echo $affiche?>" alt="affiche">
