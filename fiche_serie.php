@@ -35,7 +35,7 @@ while ($data = $req->fetch()) :
                 ?>
                 <!-- SECTION LEFT BIS N'APPARAIT QUE SUR LA VERSION MOBILE, C'EST L'AFFICHE ET LA NOTE LORSQU'ELLES S'INTERCALENT ENTRE LE TITRE ET LES INFOS DIVERSES -->
                 <div class="left_bis">
-                    <img class="affiche" src="./img/series/game_of_thrones_house_of_the_dragon.jpg" alt="affiche">
+                    <img class="affiche" src="./img/logo.jpg" alt="affiche">
                     <h4 class="box">
                         <i class="fa-solid fa-star"></i>
                         <div class="note">

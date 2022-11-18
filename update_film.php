@@ -14,9 +14,37 @@ $ID = $_GET['ID'];
         $duree = $_POST['duree'];
         $diffusion = $_POST['diffusion'];
         $note = $_POST['note'];
-        $affiche = $_POST['affiche'];
+
+    }
+       
+    if(isset($_FILES['affiche'])){
+            $tmpName = $_FILES['affiche']['tmp_name'];
+            $name = $_FILES['affiche']['name'];
+            $size = $_FILES['affiche']['size'];
+            $error = $_FILES['affiche']['error'];       
+                        
+        
+    
+        $tabExtension = explode('.', $name);
+$extension = strtolower(end($tabExtension));
+//Tableau des extensions que l'on accepte
+$extensions = ['jpg', 'png', 'jpeg', 'JPG', 'JPEG', 'PNG'];
+
+//Taille max que l'on accepte en bytes, ici c'est 2mo max
+$maxSize = 2000000;
+if(in_array($extension, $extensions) && $size <= $maxSize && $error == 0){
+
+    $uniqueName = uniqid('', true);
+    //uniqid génère quelque chose comme ca : 5f586bf96dcd38.73540086
+    $file = $uniqueName.".".$extension;
+    //$file = 5f586bf96dcd38.73540086.jpg
+
+    move_uploaded_file($tmpName, './img/'.$file);
+
+}
+
         $req = $pdo->prepare("UPDATE films SET titre = ?, titre_original = ?, genre = ?, synopsis = ?, realisateur = ?, acteurs_principaux = ?, date_de_sortie_france = ?, duree_en_minutes = ?, ou_voir_le_film = ?, note = ?, affiche = ? WHERE ID = ?");
-        $req->execute(array($titre, $original, $genre, $synopsis, $realisateur, $acteurs, $sortie, $duree, $diffusion, $note, $affiche, $ID));
+        $req->execute(array($titre, $original, $genre, $synopsis, $realisateur, $acteurs, $sortie, $duree, $diffusion, $note, $file, $ID));
         header('location: ./espace_admin.php');
     }  
 
@@ -32,7 +60,7 @@ $ID = $_GET['ID'];
     <div>
         <h2>Modification</h2>
 
-    <form action="#" method="POST">
+    <form action="#" method="POST" enctype="multipart/form-data">
 
     <label for="titre">Nouveau titre</label>
     <input type="text" name="titre" value="<?= $data->titre ?>">
@@ -65,42 +93,8 @@ $ID = $_GET['ID'];
     <input type="text" name="note" value="<?= $data->note ?>">
 
     <label for="affiche">Nouvelle affiche</label>
-    <input type="file" enctype="multipart/form-data" name="affiche" value="<?= $data->affiche ?>">
+    <input type="file" name="affiche" accept=" .jpg, .jpeg, .png, .JPG, .JPEG, .PNG">
 
-<!-- ---------------------------------code de benjamin ------------------------------------------------------------------>    
-    <h2> Uploader une affiche de série</h2>
-          <form method="POST" enctype="multipart/form-data">
-            <input type="file" name="affiche"/><br><br>
-            <input type="submit" value="Envoyez l'affiche"/>
-          </form><br>';
-
-    <?php if (!empty($_FILES)) {
-        $file_name = $_FILES['affiche']['name'];
-        $file_extension = strrchr($_FILES['affiche']['name'], ".");
-        $extensions_autoriser = array('.png', '.PNG', '.jpg', '.JPG', '.webp', '.WEBP');
-        $file_tmp_name = $_FILES['affiche']['tmp_name'];
-        $file_dest = $file_name;
-
-        // Vérification de la taille de l'image lors de l'upload
-        if (getimagesize($_FILES['affiche']['tmp_name'])[0] > 1500 || getimagesize($_FILES['affiche']['tmp_name'])[1] > 2000) {
-            echo "Erreur";
-            // Sauvegarde de l'image dans le fichier et dans la bdd
-        } else {
-            if (in_array($file_extension, $extensions_autoriser)) {
-                if (move_uploaded_file($file_tmp_name, "./img/$file_dest")) {
-                    $req = $pdo->prepare('INSERT INTO films(affiche) VALUES(?)');
-                    $req->execute(array($file_dest));
-                    echo 'Fichiers envoyer avec succès';
-                } else {
-                    echo 'Une erreur est survenu lors de l\'envoi de l\'image';
-                }
-            } else {
-                echo 'Seuls les fichiers suivant sont autoriser (png, jpg, webp)';
-            }
-        }
-    }
-    ?>
-<!-- ---------------------------------code de benjamin ------------------------------------------------------------------>
     
    
     <input type="submit" value="Mettre à jour">

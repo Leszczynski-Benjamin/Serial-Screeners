@@ -6,11 +6,15 @@ while ($data = $req->fetch()) :
 
 ?>
 
+<?php
+    $affiche = "./img/" . $data->affiche;
+?>
+
     <body>
         <div class="container_fiche">
             <!--COLONNE DE GAUCHE, AFFICHE ET NOTE GENERALE DU FILM -->
             <div class="left">
-                <img class="affiche" src=<?= $data->affiche ?> alt="affiche">
+                <img class="affiche" src="<?php echo $affiche?>" alt="affiche">
                 
                 
                 <h4 class="box">
@@ -34,8 +38,13 @@ while ($data = $req->fetch()) :
                 }
                 ?>
                 <!-- SECTION LEFT BIS N'APPARAIT QUE SUR LA VERSION MOBILE, C'EST L'AFFICHE ET LA NOTE LORSQU'ELLES S'INTERCALENT ENTRE LE TITRE ET LES INFOS DIVERSES -->
+
+                <?php
+                 $affiche = "./img/" . $data->affiche;
+                ?>
+
                 <div class="left_bis">
-                    <img class="affiche" src="./img/films/pulp_fiction.jpg" alt="affiche">
+                    <img class="affiche" src="<?php echo $affiche?>" alt="affiche">
                     <h4 class="box">
                         <i class="fa-solid fa-star"></i>
                         <div class="note">
