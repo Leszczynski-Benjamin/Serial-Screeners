@@ -64,3 +64,10 @@ window.addEventListener("onclick", losePassword);
 
 
 
+/* Apparition du menu Burger */
+const menuBurger = document.getElementById("menuBurger")
+const navLink = document.querySelector(".navLink")
+
+menuBurger.addEventListener('click', () => {
+    navLink.classList.toggle('mobile-menu')
+})

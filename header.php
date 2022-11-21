@@ -17,26 +17,19 @@
 <body>
     <header>
         <!-- Début du header, navbar et connexion inscription -->
-        <div id="accueil_titre_principal">
-            <div class="accueil_titre_1">
-                <a href="./index.php">
-                    <p>Serial Screeners</p>
-                </a>
-            </div>
-        </div>
-        </div>
-
         <nav>
-            <ul>
-                <li><a href="./index.php">Accueil</a></li>
-                <li><a href="./series.html">Séries</a></li>
-                <li><a href="./films.html">Films</a></li>
-                <li><a href="./espace.php">Mon espace</a></li>
-            </ul>
+            <a href="#" id="logo">Serial Screeners</a>
+            <div class="navLink">
+                <ul>
+                    <li><a href="#" id="navLink_accueil">Accueil</a></li>
+                    <li><a href="#" id="navLink_series">Séries</a></li>
+                    <li><a href="#" id="navLink_films">Films</a></li>
+                    <li><a href="#" id="navLink_monEspace">Mon espace</a></li>
+                    <li><a href="#overlay" id="navLink_user"><i class="fa-solid fa-user-large"></i></a></li>
+                </ul>
+            </div>
+            </a><i class="fa-solid fa-bars" id="menuBurger"></i>
         </nav>
-
-        <div class="btn-account">
-            <a href="#overlay"><i class="fa-solid fa-user-large"></i></a>
 
     </header><!-- Fin du header, navbar et connexion inscription -->
     <div id="overlay" class="overlay">

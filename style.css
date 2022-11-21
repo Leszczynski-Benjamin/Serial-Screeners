@@ -3,6 +3,8 @@
   padding: 0;
   box-sizing: border-box;
   outline: none;
+  list-style: none;
+  text-decoration: none;
 }
 
 /* Code CSS correspondant au header ( Nom du site + navbar + Connexion/Inscription ) */
@@ -19,53 +21,51 @@ header {
   src: url("./police/Scratched_Letters.ttf");
 }
 
-#accueil_titre_principal {
+nav {
   display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-
-.accueil_titre_1 {
-  font-size: 2.5em;
-  margin-left: 1rem;
-  color: #f0f0f0;
-  font-family: "Scratched Letters", sans-serif;
-}
-
-.accueil_titre_1 a {
-  text-decoration: none;
-  color: #f0f0f0;
-}
-
-
-nav ul {
-  list-style-type: none;
-  display: flex;
-  font-family: 'Cormorant', serif;
-  font-size: 1.5rem;
-}
-
-nav li {
-  margin-right: 6vw;
+  align-items: center;
+  height: 50px;
+  background: #000;
+  color: #FFF;
+  font-size: 1.2rem;
 }
 
 nav a {
-  color: #f0f0f0;
+  color: #FFF;
 }
 
 nav a:hover {
   color: #FCF800;
 }
 
-.btn-account {
-  display: flex;
+#logo {
+  position: absolute;
+  left: 50px;
+  font-size: 2rem;
+  font-family: "Scratched Letters", sans-serif;
+}
+
+.navLink {
+  height: 50px;
   align-items: center;
 }
 
-.fa-user-large:before {
-  content: "\f406";
-  color: #f0f0f0;
-  margin-right: 1em;
+.navLink ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  right: 60px;
+  height: 50px;
+  width: 45%;
+}
+
+#menuBurger {
+  display: none;
+  color: #FFF;
+  position: absolute;
+  right: 30px;
+  z-index: 2;
 }
 
 #accueil-slogo {
@@ -435,6 +435,36 @@ form {
 /* Responsive en dessous de 768px */
 
 @media screen and (max-width: 768px) {
+
+  .navLink {
+    height: 100vh;
+    width: 40%;
+    background: #000;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateX(105%);
+    transition: transform 0.5s ease;
+    z-index: 2;
+  }
+
+  .navLink ul {
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    right: 0;
+  }
+
+  #menuBurger {
+    display: block;
+  }
+
+  .mobile-menu {
+    transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 768px) {
   .carousel__face:nth-child(1) {
     background-image: url("./img/films/asterix_et_obelix_lempire_du_milieu.jpg");
     transform: rotateY(0deg) translateZ(350px);
@@ -541,6 +571,8 @@ form {
 
   }
 }
+
+
 
 /*---------------------------------------  FIN Media queries -----------------------------------------------*/
 
@@ -996,10 +1028,11 @@ h2 {
 
 /*-----------------------------------DEBUT UPDATE FILMS ET SERIES--------------------------*/
 
-.column_edit{
+.column_edit {
   width: 50%;
 }
 
-.column_large{
-display: flex;
-flex-wrap: wrap;}
+.column_large {
+  display: flex;
+  flex-wrap: wrap;
+}
