@@ -1,9 +1,9 @@
-<body>
     <?php
     include 'header.php';
     require 'database.php';
 
     ?>
+<a href="./espace_admin.php">Retour</a>
 <div class="column_large">
     <div class="column_edit">
         <h2>Liste des films</h2>
@@ -42,6 +42,4 @@ while($data = $req->fetch()){
     </div>
 </div>
 
-</body>
 
-</html>

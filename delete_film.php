@@ -9,7 +9,7 @@ $req = $pdo->prepare("DELETE FROM films WHERE ID = ?");
 
 $req->execute(array($ID));
 
-exit(header('location: ./espace_admin.php'));
+exit(header('location: ./update.php'));
 
 ?>
 

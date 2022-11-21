@@ -5,9 +5,9 @@ $id =$_GET['ID']; //Après le démarrage d’une session, nous déclenchons la v
 
 require "./database.php";
 
-$req = $pdo->prepare("DELETE FROM users WHERE id = ?"); //La variable $req correspond ainsi à la variable $pdo qui prépare la suppression de l’id ( donc des membres ; avec la déclaration PREPARE et la requête DELETE ) de la table "users"
+$req = $pdo->prepare("DELETE FROM users WHERE ID = ?"); //La variable $req correspond ainsi à la variable $pdo qui prépare la suppression de l’id ( donc des membres ; avec la déclaration PREPARE et la requête DELETE ) de la table "users"
 
 $req-> execute(array($id)); //L’instruction EXECUTE fait s’appliquer la variable $req
 
-exit(header('./update.php')); //La fonction “exit” puis “header” ramène l’utilisateur sur la page “update.php”
+header('location: ./update_membre.php'); //La fonction “exit” puis “header” ramène l’utilisateur sur la page “update_membre.php”
 ?>
