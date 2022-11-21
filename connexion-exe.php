@@ -26,7 +26,7 @@ if (isset($_POST['submit'])) {
                 header('location: fiche_film.php');
             }
         } else {
-            header('location: index.php#overlay');
+            header('location: index.php');
         }
     }
 }
