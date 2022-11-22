@@ -6,13 +6,9 @@
 
 <a href="./espace_admin.php">Retour</a>
 
-
-
-
-
 <div>
 <h2>Ajouter un film</h2>
-<form action="./create_film_exe.php" method="POST">
+<form action="./create_film_exe.php" method="POST" enctype="multipart/form-data">
 
 <label for="titre">Titre:</label>
 <input type="text" name="titre" required>

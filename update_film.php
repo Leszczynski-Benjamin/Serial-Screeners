@@ -28,7 +28,7 @@ $ID = $_GET['ID'];
         $tabExtension = explode('.', $name);
 $extension = strtolower(end($tabExtension));
 //Tableau des extensions que l'on accepte
-$extensions = ['jpg', 'png', 'jpeg', 'JPG', 'JPEG', 'PNG'];
+$extensions = ['jpg', 'png', 'jpeg'];
 
 //Taille max que l'on accepte en bytes, ici c'est 2mo max
 $maxSize = 2000000;

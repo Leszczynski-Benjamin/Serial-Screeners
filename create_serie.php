@@ -6,10 +6,6 @@
 
 <a href="./espace_admin.php">Retour</a>
 
-
-
-
-
 <div>
 <h2>Ajouter une série</h2>
 <form action="./create_serie_exe.php" method="POST">
