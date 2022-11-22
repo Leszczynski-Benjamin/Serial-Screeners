@@ -84,7 +84,7 @@ if(in_array($extension, $extensions) && $size <= $maxSize && $error == 0){
     <input type="text" name="sortie" value="<?= $data->date_de_sortie_france ?>">
 
     <label for="duree">Nouvelle durée</label>
-    <input type="text" name="duree" value="<?= $data->duree_en_minutes ?>">
+    <input type="number" name="duree" value="<?= $data->duree_en_minutes ?>">
 
     <label for="diffusion">Nouveau lien de diffusion</label>
     <input type="text" name="diffusion" value="<?= $data->ou_voir_le_film ?>">

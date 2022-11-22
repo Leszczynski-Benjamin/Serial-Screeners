@@ -85,7 +85,7 @@ $ID = $_GET['ID'];
     <input type="text" name="fin" value="<?= $data->date_dernier_episode ?>">
 
     <label for="saisons">Nouveau nombre de saisons</label>
-    <input type="text" name="saisons" value="<?= $data->saisons ?>">
+    <input type="number" name="saisons" value="<?= $data->saisons ?>">
 
     <label for="diffusion">Nouveau lien de diffusion</label>
     <input type="text" name="diffusion" value="<?= $data->diffusion ?>">
