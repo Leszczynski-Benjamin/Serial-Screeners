@@ -6,26 +6,17 @@ include 'header.php';
 // Fonction pour crypter le nom des images et le chemin
 
 ?>
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon espace</title>
-    <link rel="stylesheet" href="style.css">
-</head>
 
 <body>
     <ul id="filtres">
-        <li>Tout</li>
-        <li>Séries</li>
-        <li>Films</li>
+        <li><a href="./espace.php">Tout</a></li>
+        <li><a href="./espace.php?page=series">Séries</a></li>
+        <li><a href="./espace.php?page=films">Films</a></li>
     </ul>
     <ul id="sous-filtres">
-        <li>Listes des programmes :</li>
-        <li>Vues (0)</li>
-        <li>À voir (0)</li>
+        <li><a>Listes des programmes :</a></li>
+        <li><a>Vues (0)</a></li>
+        <li><a>À voir (0)</a></li>
     </ul>
     <div id="box-btn-submit">
         <a href="#" id="btn-submit">Soumettez vos idées de films/séries</a>
@@ -33,14 +24,26 @@ include 'header.php';
     <div id="container-espace">
         <div id="grid">
             <?php
-            // Selectionne toutes les images dans l'ordre "descending" par id
-            $req = $pdo->query('SELECT * FROM series ORDER BY id DESC');
-            while ($data = $req->fetch()) {
+            if (isset($_GET["page"])) {
+                $table = $_GET["page"];
+                $req = $pdo->query("SELECT * FROM $table ORDER BY id DESC");
+                $data[$table] = $req->fetchAll();
+            } else {
+                $req = $pdo->query("SELECT * FROM series ORDER BY id DESC");
+                $data["series"] = $req->fetchAll();
+
+                $req = $pdo->query("SELECT * FROM films ORDER BY id DESC");
+                $data["films"] = $req->fetchAll();
+            }
+
+            foreach ($data as $items) {
+                foreach ($items as $item) {
             ?>
-                <div class="grid-item">
-                    <img src="./img/<?= $data->affiche ?>" alt="" height="260px" width="160px">
-                </div>
+                    <div class="grid-item">
+                        <img src="./img/<?= $item->affiche ?>" alt="" height="260px" width="160px">
+                    </div>
             <?php
+                }
             }
             ?>
 
@@ -49,7 +52,7 @@ include 'header.php';
 
 </body>
 
-</html>
+
 
 <?php
 

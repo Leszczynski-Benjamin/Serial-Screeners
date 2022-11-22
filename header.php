@@ -18,13 +18,13 @@
     <header>
         <!-- Début du header, navbar et connexion inscription -->
         <nav>
-            <a href="#" id="logo">Serial Screeners</a>
+            <a href="index.php" id="logo">Serial Screeners</a>
             <div class="navLink">
                 <ul>
-                    <li><a href="#" id="navLink_accueil">Accueil</a></li>
-                    <li><a href="#" id="navLink_series">Séries</a></li>
-                    <li><a href="#" id="navLink_films">Films</a></li>
-                    <li><a href="#" id="navLink_monEspace">Mon espace</a></li>
+                    <li><a href="index.php" id="navLink_accueil">Accueil</a></li>
+                    <li><a href="fiche_serie.php" id="navLink_series">Séries</a></li>
+                    <li><a href="fiche_film.php" id="navLink_films">Films</a></li>
+                    <li><a href="espace.php" id="navLink_monEspace">Mon espace</a></li>
                     <li><a href="#overlay" id="navLink_user"><i class="fa-solid fa-user-large"></i></a></li>
                 </ul>
             </div>

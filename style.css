@@ -648,8 +648,13 @@ h2 {
   margin-right: 20px;
 }
 
-#filtres li:hover,
-#sous-filtres li:hover {
+#sous-filtres a,
+#filtres a {
+  color: #D9D9D9;
+}
+
+#filtres a:hover,
+#sous-filtres a:hover {
   color: #FCF800;
   cursor: pointer;
   transition: color 1s ease;
