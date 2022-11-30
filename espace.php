@@ -19,7 +19,7 @@ include 'header.php';
         <li><a>À voir (0)</a></li>
     </ul>
     <div id="box-btn-submit">
-        <a href="#" id="btn-submit">Soumettez vos idées de films/séries</a>
+        <a href="./submit.php" id="btn-submit">Soumettez vos idées de films/séries</a>
     </div>
     <div id="container-espace">
         <div id="grid">

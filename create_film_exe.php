@@ -2,18 +2,6 @@
 include './fonction.php';
 require "./database.php";
 
-    if(!empty($_POST)){
-        $errors = array();
-
-    if(empty($_POST['titre'])){
-        echo 'Merci de renseigner le titre du film';
-    }
-    /*elseif(empty($_POST['duree_en_minutes'])){
-        echo 'Merci de renseigner la durée du film';
-    }*/
-    
-
-    else {
         $titre = caracteres_speciaux($_POST['titre']);
         $original = caracteres_speciaux($_POST['original']);
         $genre = caracteres_speciaux($_POST['genre']);
@@ -24,7 +12,7 @@ require "./database.php";
         $duree = caracteres_speciaux($_POST['duree']);
         $diffusion = caracteres_speciaux($_POST['diffusion']);
         $note = caracteres_speciaux($_POST['note']);
-    }
+    
 
         if(isset($_FILES['affiche'])){
             $tmpName = $_FILES['affiche']['tmp_name'];
@@ -57,7 +45,7 @@ require "./database.php";
 
         exit();
 }
-}
+
 if(isset($errors)){
     $_SESSION['erreur'] = $errors;
     header('location: ./index.php');

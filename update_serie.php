@@ -1,6 +1,7 @@
 <?php
 session_start();
 require "./database.php";
+include 'header.php';
 
 $ID = $_GET['ID'];
     if(!empty($_POST)){
@@ -55,48 +56,62 @@ $ID = $_GET['ID'];
 
     ?>
 
+<a href="./espace_admin.php" class="retour">Retour</a>
+
     <div>
         <h2>Modification</h2>
 
     <form action="#" method="POST" enctype="multipart/form-data">
 
-    <label for="titre">Nouveau titre</label>
-    <input type="text" name="titre" value="<?= $data->titre ?>">
+    <div class="rub">
+        <label for="titre" class="infos">Nouveau titre:</label>
+        <input type="text" name="titre" class="case2" value="<?= $data->titre ?>">
 
-    <label for="original">Nouveau titre original</label>
-    <input type="text" name="original" value="<?= $data->titre_original ?>">
+        <label for="original" class="infos">Nouveau titre original:</label>
+        <input type="text" name="original" class="case2" value="<?= $data->titre_original ?>">
 
-    <label for="genre">Nouveau genre</label>
-    <input type="text" name="genre" value="<?= $data->genre ?>">
+        <label for="genre" class="infos">Nouveau genre:</label>
+        <input type="text" name="genre" class="case2" value="<?= $data->genre ?>">
 
-    <label for="synopsis">Nouveau synopsis</label>
-    <input type="text" name="synopsis" value="<?= $data->synopsis ?>">
+        <label for="showrunners" class="infos">Nouveaux showrunners:</label>
+        <input type="text" name="showrunners" class="case2" value="<?= $data->showrunners ?>">
+    </div>
 
-    <label for="showrunners">Nouveaux showrunners</label>
-    <input type="text" name="showrunners" value="<?= $data->showrunners ?>">
+    <div class="rub">
+        <label for="acteurs" class="infos">Nouveau casting:</label>
+        <input type="text" name="acteurs" class="case2" value="<?= $data->acteurs_principaux ?>">
 
-    <label for="acteurs">Nouveau casting</label>
-    <input type="text" name="acteurs" value="<?= $data->acteurs_principaux ?>">
+        <label for="debut" class="infos">Nouvelle année de début:</label>
+        <input type="text" name="debut" class="case2" value="<?= $data->date_premier_episode ?>">
 
-    <label for="debut">Nouvelle année de début</label>
-    <input type="text" name="debut" value="<?= $data->date_premier_episode ?>">
+        <label for="fin" class="infos">Nouvelle année de fin:</label>
+        <input type="text" name="fin" class="case2" value="<?= $data->date_dernier_episode ?>">
+    </div>
 
-    <label for="fin">Nouvelle année de fin</label>
-    <input type="text" name="fin" value="<?= $data->date_dernier_episode ?>">
+    <div class="rub">
+        <label for="saisons" class="infos">Nouveau nombre de saisons:</label>
+        <input type="number" name="saisons" class="case2" value="<?= $data->saisons ?>">
 
-    <label for="saisons">Nouveau nombre de saisons</label>
-    <input type="number" name="saisons" value="<?= $data->saisons ?>">
+        <label for="diffusion" class="infos">Nouveau lien de diffusion:</label>
+        <input type="text" name="diffusion" class="case2" value="<?= $data->diffusion ?>">
 
-    <label for="diffusion">Nouveau lien de diffusion</label>
-    <input type="text" name="diffusion" value="<?= $data->diffusion ?>">
+        <label for="note" class="infos">Nouvelle note:</label>
+        <input type="text" name="note" class="case2" value="<?= $data->note ?>">
+    </div>
 
-    <label for="note">Nouvelle note</label>
-    <input type="text" name="note" value="<?= $data->note ?>">
+    <div class="rub">
+        <label for="synopsis" class="infos">Nouveau synopsis:</label>
+        <textarea type="text" name="synopsis" class="case2" cols="70" rows="10"><?= $data->synopsis?></textarea>
+    </div>
 
-    <label for="affiche">Nouvelle affiche</label>
-    <input type="file" name="affiche" accept=" .jpg, .jpeg, .png, .JPG, .JPEG, .PNG">
-   
-    <input type="submit" value="Mettre à jour">
+    <div class="rub">
+        <label for="affiche" class="infos">Nouvelle affiche:</label>
+        <input type="file" name="affiche" accept=" .jpg, .jpeg, .png, .JPG, .JPEG, .PNG">
+    </div>
+
+    <div class="rub">
+        <input type="submit" class="sub_film" value="Mettre à jour">
+    </div>
 
     </form>
 </div>
