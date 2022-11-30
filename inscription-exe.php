@@ -20,7 +20,7 @@ if (!empty($_POST)) {
         $req = $pdo->prepare("INSERT INTO users SET pseudo = ?, email = ?, user_password = ?");
         $password = password_hash($_POST['user_password'], PASSWORD_BCRYPT);
         $req->execute([$pseudo, $email, $password]);
-        header('location: index.php');
+        header('location: index.php#overlay');
         exit();
     }
 }
