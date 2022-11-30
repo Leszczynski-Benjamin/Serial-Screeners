@@ -50,7 +50,7 @@ nav a:hover {
   align-items: center;
 }
 
-.navLink ul {
+.navLink .navLink1 {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -401,6 +401,26 @@ form {
 }
 
 /* -------------------------- FIN POPUP INSCRIPTION/CONNEXION ------------------------------ */
+
+/* -------------------------- OVERLAY MEMBRE ----------------------------------------------- */
+#overlay-user {
+  background-color: #0D1726;
+  margin-top: 140px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid white;
+  visibility: hidden;
+  opacity: 0;
+}
+
+#navLink_user {
+  cursor: pointer;
+}
+
+/* -------------------------- FIN OVERLAY MEMBRE ----------------------------------------------- */
+
 /*--------------------------------------- Media queries -----------------------------------------------*/
 
 
@@ -448,7 +468,7 @@ form {
     z-index: 2;
   }
 
-  .navLink ul {
+  .navLink .navLink1 {
     height: 100vh;
     width: 100%;
     flex-direction: column;

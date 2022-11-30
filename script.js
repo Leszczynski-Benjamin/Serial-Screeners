@@ -71,3 +71,15 @@ const navLink = document.querySelector(".navLink")
 menuBurger.addEventListener('click', () => {
     navLink.classList.toggle('mobile-menu')
 })
+
+/* Apparition de l'onglet membre */
+
+let clickedMember = false;
+
+function overlayUser() {
+
+    document.getElementById("overlay-user").style.transition = "all .5s ease";
+    document.getElementById("overlay-user").style.opacity = (clickedMember) ? "0" : "1";
+    document.getElementById("overlay-user").style.visibility = (clickedMember) ? "hidden" : "visible";
+    clickedMember = !clickedMember;
+}

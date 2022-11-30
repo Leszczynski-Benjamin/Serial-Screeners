@@ -17,21 +17,52 @@
 <body>
     <header>
         <!-- Début du header, navbar et connexion inscription -->
-        <nav>
-            <a href="index.php" id="logo">Serial Screeners</a>
-            <div class="navLink">
-                <ul>
-                    <li><a href="index.php" id="navLink_accueil">Accueil</a></li>
-                    <li><a href="fiche_serie.php" id="navLink_series">Séries</a></li>
-                    <li><a href="fiche_film.php" id="navLink_films">Films</a></li>
-                    <li><a href="espace.php" id="navLink_monEspace">Mon espace</a></li>
-                    <li><a href="#overlay" id="navLink_user"><i class="fa-solid fa-user-large"></i></a></li>
-                </ul>
-            </div>
-            </a><i class="fa-solid fa-bars" id="menuBurger"></i>
-        </nav>
 
-    </header><!-- Fin du header, navbar et connexion inscription -->
+
+        <?php
+        require 'database.php';
+        session_start();
+        if (isset($_SESSION['pseudo'])) {
+            echo '  
+            <nav>
+                <a href="index.php" id="logo">Serial Screeners</a>
+                <div class="navLink">
+                    <ul class="navLink1">
+                        <li><a href="index.php" id="navLink_accueil">Accueil</a></li>
+                        <li><a href="fiche_serie.php" id="navLink_series">Séries</a></li>
+                        <li><a href="fiche_film.php" id="navLink_films">Films</a></li>
+                        <li><a href="espace.php" id="navLink_monEspace">Mon espace</a></li>
+                        <li id="navLink_user" onclick="overlayUser()"><i class="fa-solid fa-user-large"></i></li>
+                        <ul id="overlay-user" class="overlay-user">
+                            <li><a href="deconnexion-exe.php" id="deco">Déconnexion</a></li>
+                            <li><a href="deconnexion-exe.php" id="deco">Changer de mot de passe</a></li>
+                            <li><a href="deconnexion-exe.php" id="deco">Se désinscrire</a></li>
+                        </ul>
+                    </ul>
+                    </div>
+                </div>
+                </a><i class="fa-solid fa-bars" id="menuBurger"></i>
+            </nav> ';
+        } else {
+            echo ' 
+            <nav>
+                <a href="index.php" id="logo">Serial Screeners</a>
+                <div class="navLink">
+                    <ul class="navLink1">
+                        <li><a href="index.php" id="navLink_accueil">Accueil</a></li>
+                        <li><a href="fiche_serie.php" id="navLink_series">Séries</a></li>
+                        <li><a href="fiche_film.php" id="navLink_films">Films</a></li>
+                        <li><a href="#overlay" id="navLink_user"><i class="fa-solid fa-user-large"></i></a></li>
+                    </ul>
+                </div>
+                </a><i class="fa-solid fa-bars" id="menuBurger"></i>
+            </nav>';
+        }
+        ?>
+
+
+    </header>
+    <!-- Fin du header, navbar et connexion inscription -->
     <div id="overlay" class="overlay">
         <!-- Popup Espace connexion -->
         <div id="popup">
