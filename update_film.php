@@ -1,6 +1,7 @@
 <?php
 session_start();
 require "./database.php";
+include 'header.php';
 
 $ID = $_GET['ID'];
     if(!empty($_POST)){
@@ -55,50 +56,60 @@ if(in_array($extension, $extensions) && $size <= $maxSize && $error == 0){
     $data = $req->fetch();
     
         ?>
-        
+ 
+ <a href="./espace_admin.php" class="retour">Retour</a>
 
     <div>
         <h2>Modification</h2>
 
     <form action="#" method="POST" enctype="multipart/form-data">
 
-    <label for="titre">Nouveau titre</label>
-    <input type="text" name="titre" value="<?= $data->titre ?>">
+    <div class="rub">
+        <label for="titre" class="infos">Nouveau titre:</label>
+        <input type="text" name="titre" class="case2" value="<?= $data->titre ?>">
 
-    <label for="original">Nouveau titre original</label>
-    <input type="text" name="original" value="<?= $data->titre_original ?>">
+        <label for="original" class="infos">Nouveau titre original:</label>
+        <input type="text" name="original" class="case2" value="<?= $data->titre_original ?>">
 
-    <label for="genre">Nouveau genre</label>
-    <input type="text" name="genre" value="<?= $data->genre ?>">
-
-    <label for="synopsis">Nouveau synopsis</label>
-    <input type="text" name="synopsis" value="<?= $data->synopsis ?>">
-
-    <label for="realisateur">Nouveau réalisateur</label>
-    <input type="text" name="realisateur" value="<?= $data->realisateur ?>">
-
-    <label for="acteurs">Nouveau casting</label>
-    <input type="text" name="acteurs" value="<?= $data->acteurs_principaux ?>">
-
-    <label for="sortie">Nouvelle date de sortie</label>
-    <input type="text" name="sortie" value="<?= $data->date_de_sortie_france ?>">
-
-    <label for="duree">Nouvelle durée</label>
-    <input type="number" name="duree" value="<?= $data->duree_en_minutes ?>">
-
-    <label for="diffusion">Nouveau lien de diffusion</label>
-    <input type="text" name="diffusion" value="<?= $data->ou_voir_le_film ?>">
-
-    <label for="note">Nouvelle note</label>
-    <input type="text" name="note" value="<?= $data->note ?>">
-
-    <label for="affiche">Nouvelle affiche</label>
-    <input type="file" name="affiche" accept=" .jpg, .jpeg, .png, .JPG, .JPEG, .PNG">
-
+        <label for="genre" class="infos">Nouveau genre:</label>
+        <input type="text" name="genre" class="case2" value="<?= $data->genre ?>">
+    </div>
     
-   
-    <input type="submit" value="Mettre à jour">
+    <div class="rub">
+        <label for="realisateur" class="infos">Nouveau réalisateur:</label>
+        <input type="text" name="realisateur" class="case2" value="<?= $data->realisateur ?>">
 
+        <label for="acteurs" class="infos">Nouveau casting:</label>
+        <input type="text" name="acteurs" class="case2" value="<?= $data->acteurs_principaux ?>">
+
+        <label for="sortie" class="infos">Nouvelle date de sortie:</label>
+        <input type="text" name="sortie" class="case2" value="<?= $data->date_de_sortie_france ?>">
+    </div>
+
+    <div class="rub">
+        <label for="duree" class="infos">Nouvelle durée:</label>
+        <input type="number" name="duree" class="case2" value="<?= $data->duree_en_minutes ?>">
+
+        <label for="diffusion" class="infos">Nouveau lien de diffusion:</label>
+        <input type="text" name="diffusion" class="case2" value="<?= $data->ou_voir_le_film ?>">
+
+        <label for="note" class="infos">Nouvelle note:</label>
+        <input type="text" name="note" class="case2" value="<?= $data->note ?>">
+    </div>
+
+    <div class="rub">
+        <label for="synopsis" class="infos">Nouveau synopsis:</label>
+        <textarea type="text" name="synopsis" class="case2" cols="70" rows="10"><?= $data->synopsis ?></textarea>
+    </div>
+
+    <div class="rub">
+        <label for="affiche" class="infos">Nouvelle affiche:</label>
+        <input type="file" name="affiche" accept=" .jpg, .jpeg, .png, .JPG, .JPEG, .PNG">
+    </div>
+    
+    <div class="rub">
+    <input type="submit" class="sub_film" value="Mettre à jour">
+    </div>
     </form>
 </div>
 

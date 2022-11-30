@@ -2,18 +2,6 @@
 include './fonction.php';
 require "./database.php";
 
-    if(!empty($_POST)){
-        $errors = array();
-
-    if(empty($_POST['titre'])){
-        echo 'Merci de renseigner le titre de la série';
-    }
-   /* elseif(empty($_POST['recette'])){
-        echo 'faux2';
-    }
-   */
-
-    else {
         $titre = caracteres_speciaux($_POST['titre']);
         $original = caracteres_speciaux($_POST['original']);
         $genre = caracteres_speciaux($_POST['genre']);
@@ -25,9 +13,7 @@ require "./database.php";
         $saisons = caracteres_speciaux($_POST['saisons']);
         $diffusion = caracteres_speciaux($_POST['diffusion']);
         $note = caracteres_speciaux($_POST['note']);
-    }
-
-        
+    
     if(isset($_FILES['affiche'])){
         $tmpName = $_FILES['affiche']['tmp_name'];
         $name = $_FILES['affiche']['name'];
@@ -58,7 +44,6 @@ $req->execute([$titre, $original, $genre, $synopsis, $showrunners, $casting, $de
     header('location: ./espace_admin.php');
 
     exit();
-}
 }
 if(isset($errors)){
 $_SESSION['erreur'] = $errors;

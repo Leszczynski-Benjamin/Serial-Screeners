@@ -1031,6 +1031,78 @@ h2 {
 
 /* ----------------------------------- FIN FICHES ---------------------------------------------- */
 
+/*-----------------------------------------DEBUT ESPACE ADMIN-------------------------------------------------------*/
+
+.welcome{
+
+  font-size: 2em;
+  padding: 10vh 0;
+}
+
+.links_box{
+  width: 28%;
+  margin: auto;
+  text-align: center;
+}
+
+.link_admin{
+  font-size: 1.5em;
+  color: #FCF800;
+  display: block;
+  padding: 0.5em 0;
+  transition-duration: 0.7s; 
+
+}
+
+.link_admin:hover{  
+  transform: scale(1.1) ;
+  transition-duration: 0.7s;
+  color: #D9D9D9;
+
+}
+
+/* TABLETTE */
+
+@media screen and (max-width: 769px) {
+
+  .welcome{
+
+    font-size: 1.6em;
+    padding: 7vh 0;
+  }
+
+  .links_box{
+    width: 50%;
+  }
+
+  .link_admin{
+    font-size: 1.2em;
+  }
+
+}
+
+/*MOBILE*/
+
+@media screen and (max-width: 421px) {
+
+  .welcome{
+
+    font-size: 1.3em;
+    padding: 4vh 0;
+  }
+
+  .links_box{
+    width: 70%;
+  }
+
+  .link_admin{
+    font-size: 1em;
+  } 
+  
+}
+
+/*-----------------------------------------FIN ESPACE ADMIN-------------------------------------------------------*/
+
 /*-----------------------------------DEBUT UPDATE FILMS ET SERIES--------------------------*/
 
 .column_edit {
@@ -1041,3 +1113,145 @@ h2 {
   display: flex;
   flex-wrap: wrap;
 }
+
+.colonne{
+  width: 80%;
+  text-align: center;
+  padding: 2em 0 0 4em;
+
+}
+
+.update{
+  color: #FCF800;
+}
+
+.update:hover, .update2:hover{
+  color: red;
+}
+
+.retour{
+  display: block;
+  margin-top: 2vh;
+  color: #FCF800;
+  font-size: 1.5em;
+}
+
+/* TABLETTE */
+
+@media screen and (max-width: 769px) {
+
+  .retour{
+    margin-top: 1vh;
+    font-size: 1.2em;
+  }
+
+  .colonne{
+    width: 100%;
+    text-align: center;
+    padding: 2em 1em 0;
+  
+  }
+
+  .case2{  /* pour les cases des formulaires create et update, le box sizing et le max width sont là pour avoir le textarea du synopsis qui soit responsive*/
+    display: block;
+    margin: 1vh auto;
+   
+    box-sizing: border-box;
+    max-width: 50%;
+  }
+
+}
+
+/*MOBILE*/
+
+@media screen and (max-width: 421px) {
+
+  .column_large {
+    display: block;
+  }
+
+  .column_edit {
+    width: 100%;
+    padding-top: 5vh;
+  }
+}
+
+/*-----------------------------------FIN UPDATE FILMS ET SERIES--------------------------*/
+
+/*----------------------------------------------UPDATE MEMBRE-------------------------------------------- */
+
+.colonne_mbr{
+  width: 100%;
+  text-align: center;
+  padding: 2em 0 0 4em;
+
+}
+
+/*MOBILE*/
+
+@media screen and (max-width: 421px) {
+
+  .colonne_mbr{
+    width: 100%;
+    text-align: center;
+    padding-left: 0;
+  
+  }
+}
+/*----------------------------------------------FIN UPDATE MEMBRE-------------------------------------------- */
+
+/* --------------------------------------CREATE FILM-------------------------------------------------- */
+
+.rub{
+  padding-top: 2em;
+}
+
+.sub_film{
+  cursor: pointer;
+  margin-bottom: 5vh;
+}
+
+
+@media screen and (max-width: 769px) {
+  .sub_film{
+    margin: 2vh 0 10vh;  
+  }
+}
+
+
+/* --------------------------------------FIN CREATE FILM-------------------------------------------------- */
+
+/*MOBILE POUR LE SUBMIT DES MEMBRES*/
+
+@media screen and (max-width: 421px) {
+
+  .case{
+    display: block;
+    padding-top: 2vh;
+  }
+
+  .rub{
+    padding-top: 0;
+  }
+
+  }
+
+/*------------------LISTE DES SUGGESTIONS DANS L'ESPACE ADMIN------------------------------------*/
+
+
+.colonne_submit{
+width: 100%;
+text-align: center;
+margin-top: 5vh;
+}
+
+@media screen and (max-width: 421px) {
+
+  .colonne_submit{
+    font-size: 0.7em;
+  }
+
+  
+}
+
+
