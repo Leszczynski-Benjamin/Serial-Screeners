@@ -613,20 +613,9 @@ form {
 
 /*---------------------------------------  FIN Media queries -----------------------------------------------*/
 
-/* Début code Footer*/
-.container_carousel+footer {
-  width: 100%;
-  background: #041626;
-  color: white;
-  display: flex;
-  align-items: center;
-  font-family: 'Cormorant', serif;
+footer {
   position: fixed;
   bottom: 0;
-  height: 2em;
-}
-
-footer {
   width: 100%;
   background: #041626;
   color: white;

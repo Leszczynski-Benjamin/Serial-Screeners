@@ -29,8 +29,8 @@
                 <div class="navLink">
                     <ul class="navLink1">
                         <li><a href="index.php" id="navLink_accueil">Accueil</a></li>
-                        <li><a href="fiche_serie.php" id="navLink_series">Séries</a></li>
-                        <li><a href="fiche_film.php" id="navLink_films">Films</a></li>
+                        <li><a href="series.php" id="navLink_series">Séries</a></li>
+                        <li><a href="films.php" id="navLink_films">Films</a></li>
                         <li><a href="espace.php" id="navLink_monEspace">Mon espace</a></li>
                         <li id="navLink_user" onclick="overlayUser()"><i class="fa-solid fa-user-large"></i></li>
                         ' . '<span id="pseudoStyle">Salut ' . $_SESSION["pseudo"]  . '</span>
@@ -51,8 +51,8 @@
                 <div class="navLink">
                     <ul class="navLink1">
                         <li><a href="index.php" id="navLink_accueil">Accueil</a></li>
-                        <li><a href="fiche_serie.php" id="navLink_series">Séries</a></li>
-                        <li><a href="fiche_film.php" id="navLink_films">Films</a></li>
+                        <li><a href="series.php" id="navLink_series">Séries</a></li>
+                        <li><a href="films.php" id="navLink_films">Films</a></li>
                         <li><a href="#overlay" id="navLink_user"><i class="fa-solid fa-user-large"></i></a></li>
                     </ul>
                 </div>

@@ -41,3 +41,6 @@ while($data = $req->fetch()){
             </table>
     </div>
 </div>
+
+<?php
+include 'footer.php';
