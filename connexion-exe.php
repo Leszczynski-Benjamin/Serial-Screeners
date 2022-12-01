@@ -23,7 +23,7 @@ if (isset($_POST['submit'])) {
             if ($_SESSION['user_kind'] == 1) {
                 header('location: espace_admin.php');
             } else {
-                header('location: fiche_serie.php');
+                header('location: espace.php');
             }
         } else {
             header('location: index.php#overlay');
