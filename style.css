@@ -1061,6 +1061,16 @@ h2 {
     height: 10vh;
   }
 
+  .button {
+    
+    width: 33vw;
+   
+  }
+
+  .bouton-jaune{
+    width: 22vw;;
+  }
+
 
 }
 
