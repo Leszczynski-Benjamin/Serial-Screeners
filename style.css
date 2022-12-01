@@ -21,6 +21,10 @@ header {
   src: url("./police/Scratched_Letters.ttf");
 }
 
+#pseudoStyle {
+  color: #FCF800;
+}
+
 nav {
   display: flex;
   align-items: center;
@@ -1062,13 +1066,14 @@ h2 {
   }
 
   .button {
-    
+
     width: 33vw;
-   
+
   }
 
-  .bouton-jaune{
-    width: 22vw;;
+  .bouton-jaune {
+    width: 22vw;
+    ;
   }
 
 
