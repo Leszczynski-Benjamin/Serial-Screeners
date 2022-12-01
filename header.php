@@ -33,8 +33,8 @@
                         <li><a href="fiche_film.php" id="navLink_films">Films</a></li>
                         <li><a href="espace.php" id="navLink_monEspace">Mon espace</a></li>
                         <li id="navLink_user" onclick="overlayUser()"><i class="fa-solid fa-user-large"></i></li>
-                        ' . '<span id="pseudoStyle">Salut ' . $_SESSION["pseudo"]  . '</span>';
-            '<ul id="overlay-user" class="overlay-user">
+                        ' . '<span id="pseudoStyle">Salut ' . $_SESSION["pseudo"]  . '</span>
+            <ul id="overlay-user" class="overlay-user">
                             <li><a href="deconnexion-exe.php" id="deco">Déconnexion</a></li>
                             <li><a href="deconnexion-exe.php" id="deco">Changer de mot de passe</a></li>
                             <li><a href="deconnexion-exe.php" id="deco">Se désinscrire</a></li>
