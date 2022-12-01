@@ -592,12 +592,25 @@ form {
   }
 }
 
+/* Responsive en dessous de 320px */
+@media screen and (max-width: 320px) {
+  .mentleg a {
+    width: 50%;
+    text-align: center;
+    padding-top: 10px;
+  }
+
+  .mentleg p {
+    width: 50%;
+  }
+
+}
 
 
 /*---------------------------------------  FIN Media queries -----------------------------------------------*/
 
 /* Début code Footer*/
-footer {
+.container_carousel+footer {
   width: 100%;
   background: #041626;
   color: white;
@@ -606,6 +619,16 @@ footer {
   font-family: 'Cormorant', serif;
   position: fixed;
   bottom: 0;
+  height: 2em;
+}
+
+footer {
+  width: 100%;
+  background: #041626;
+  color: white;
+  display: flex;
+  align-items: center;
+  font-family: 'Cormorant', serif;
   height: 2em;
 }
 
@@ -621,6 +644,10 @@ footer {
 .mentleg a {
   text-decoration: none;
   color: #FCF800;
+}
+
+.mentleg a:hover {
+  text-decoration: underline;
 }
 
 #mentleg p {
@@ -1041,29 +1068,29 @@ h2 {
 
 /*-----------------------------------------DEBUT ESPACE ADMIN-------------------------------------------------------*/
 
-.welcome{
+.welcome {
 
   font-size: 2em;
   padding: 10vh 0;
 }
 
-.links_box{
+.links_box {
   width: 28%;
   margin: auto;
   text-align: center;
 }
 
-.link_admin{
+.link_admin {
   font-size: 1.5em;
   color: #FCF800;
   display: block;
   padding: 0.5em 0;
-  transition-duration: 0.7s; 
+  transition-duration: 0.7s;
 
 }
 
-.link_admin:hover{  
-  transform: scale(1.1) ;
+.link_admin:hover {
+  transform: scale(1.1);
   transition-duration: 0.7s;
   color: #D9D9D9;
 
@@ -1073,17 +1100,17 @@ h2 {
 
 @media screen and (max-width: 769px) {
 
-  .welcome{
+  .welcome {
 
     font-size: 1.6em;
     padding: 7vh 0;
   }
 
-  .links_box{
+  .links_box {
     width: 50%;
   }
 
-  .link_admin{
+  .link_admin {
     font-size: 1.2em;
   }
 
@@ -1093,20 +1120,20 @@ h2 {
 
 @media screen and (max-width: 421px) {
 
-  .welcome{
+  .welcome {
 
     font-size: 1.3em;
     padding: 4vh 0;
   }
 
-  .links_box{
+  .links_box {
     width: 70%;
   }
 
-  .link_admin{
+  .link_admin {
     font-size: 1em;
-  } 
-  
+  }
+
 }
 
 /*-----------------------------------------FIN ESPACE ADMIN-------------------------------------------------------*/
@@ -1122,22 +1149,23 @@ h2 {
   flex-wrap: wrap;
 }
 
-.colonne{
+.colonne {
   width: 80%;
   text-align: center;
   padding: 2em 0 0 4em;
 
 }
 
-.update{
+.update {
   color: #FCF800;
 }
 
-.update:hover, .update2:hover{
+.update:hover,
+.update2:hover {
   color: red;
 }
 
-.retour{
+.retour {
   display: block;
   margin-top: 2vh;
   color: #FCF800;
@@ -1148,22 +1176,23 @@ h2 {
 
 @media screen and (max-width: 769px) {
 
-  .retour{
+  .retour {
     margin-top: 1vh;
     font-size: 1.2em;
   }
 
-  .colonne{
+  .colonne {
     width: 100%;
     text-align: center;
     padding: 2em 1em 0;
-  
+
   }
 
-  .case2{  /* pour les cases des formulaires create et update, le box sizing et le max width sont là pour avoir le textarea du synopsis qui soit responsive*/
+  .case2 {
+    /* pour les cases des formulaires create et update, le box sizing et le max width sont là pour avoir le textarea du synopsis qui soit responsive*/
     display: block;
     margin: 1vh auto;
-   
+
     box-sizing: border-box;
     max-width: 50%;
   }
@@ -1188,7 +1217,7 @@ h2 {
 
 /*----------------------------------------------UPDATE MEMBRE-------------------------------------------- */
 
-.colonne_mbr{
+.colonne_mbr {
   width: 100%;
   text-align: center;
   padding: 2em 0 0 4em;
@@ -1199,30 +1228,31 @@ h2 {
 
 @media screen and (max-width: 421px) {
 
-  .colonne_mbr{
+  .colonne_mbr {
     width: 100%;
     text-align: center;
     padding-left: 0;
-  
+
   }
 }
+
 /*----------------------------------------------FIN UPDATE MEMBRE-------------------------------------------- */
 
 /* --------------------------------------CREATE FILM-------------------------------------------------- */
 
-.rub{
+.rub {
   padding-top: 2em;
 }
 
-.sub_film{
+.sub_film {
   cursor: pointer;
   margin-bottom: 5vh;
 }
 
 
 @media screen and (max-width: 769px) {
-  .sub_film{
-    margin: 2vh 0 10vh;  
+  .sub_film {
+    margin: 2vh 0 10vh;
   }
 }
 
@@ -1233,33 +1263,31 @@ h2 {
 
 @media screen and (max-width: 421px) {
 
-  .case{
+  .case {
     display: block;
     padding-top: 2vh;
   }
 
-  .rub{
+  .rub {
     padding-top: 0;
   }
 
-  }
+}
 
 /*------------------LISTE DES SUGGESTIONS DANS L'ESPACE ADMIN------------------------------------*/
 
 
-.colonne_submit{
-width: 100%;
-text-align: center;
-margin-top: 5vh;
+.colonne_submit {
+  width: 100%;
+  text-align: center;
+  margin-top: 5vh;
 }
 
 @media screen and (max-width: 421px) {
 
-  .colonne_submit{
+  .colonne_submit {
     font-size: 0.7em;
   }
 
-  
+
 }
-
-
