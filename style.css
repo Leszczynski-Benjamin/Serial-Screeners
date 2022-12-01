@@ -900,10 +900,6 @@ h2 {
   font-size: 1.5em;
 }
 
-.noter {
-  color: #D9D9D9;
-}
-
 .avis {
   display: block;
   margin-top: 5vh;
@@ -975,10 +971,6 @@ h2 {
     font-size: 1.2em;
   }
 
-  .stars {
-    font-size: 0.8em;
-  }
-
   .commentaire {
     width: 50%;
   }
@@ -1035,10 +1027,6 @@ h2 {
   .box {
     font-size: 1.2em;
     padding: 0.2em 0 1em;
-  }
-
-  .stars {
-    font-size: 0.6em;
   }
 
   .commentaire {
