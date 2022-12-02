@@ -7,8 +7,6 @@
     <meta description="Le site collaboratif qui répertorie les films et séries" content="série, télévision, films, cinéma, divertissement, culture, comédie, drame, thriller, action, horreur, JustWatch, blockbuster, imaginaire, caméra">
     <title>Serial Screeners</title>
     <link rel="stylesheet" href="style.css">
-     <!-- Accès au script JS -->
-    <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/6d9b9bcbc0.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -120,7 +118,9 @@
             </div>
         </div>
     </div>
-   
+
     <!-- Début bannière logo et slogan -->
     <div id="accueil-banniere">
         <div class="accueil-scotch-top"></div>
+        <!-- Accès au script JS -->
+        <script src="script.js"></script>
