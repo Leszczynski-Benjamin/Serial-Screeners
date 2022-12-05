@@ -118,8 +118,9 @@
             </div>
         </div>
     </div>
-   <!-- Accès au script JS -->
-   <script src="script.js"></script>
+
     <!-- Début bannière logo et slogan -->
     <div id="accueil-banniere">
         <div class="accueil-scotch-top"></div>
+        <!-- Accès au script JS -->
+        <script src="script.js"></script>
