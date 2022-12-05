@@ -8,8 +8,9 @@ $req = $pdo->query("SELECT * FROM films ORDER BY id DESC");
 
                     foreach ($data as $items) {
                     foreach ($items as $item) {
- 
-           echo'<div class="grid-item">
+                        $id = isset($_GET['ID']);
+           echo'<a href="./fiche_film.php?id='.$data->id.'">
+           <div class="grid-item">
                 <img src="./img/'.$item->affiche.'"alt="" height="260px" width="160px">
             </div>';
      

@@ -1,5 +1,3 @@
-
-
 <?php
 require 'database.php';
 include 'header.php';
