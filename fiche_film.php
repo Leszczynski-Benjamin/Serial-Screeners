@@ -8,7 +8,6 @@ while ($data = $req->fetch()) :
 $affiche = "./img/" . $data->affiche;
 ?>
 
-    <body>
         <div class="container_fiche">
             <!--COLONNE DE GAUCHE, AFFICHE ET NOTE GENERALE DU FILM -->
             <div class="left">
@@ -94,19 +93,26 @@ $affiche = "./img/" . $data->affiche;
                 <h2>Avis</h2>
             </div>
 
-            <div class="avis">
-                <form action="com_exe.php" method="post">
+            <?php if (isset($_SESSION['pseudo'])) { ?>
+
+                <form action="./com-exe.php" method="post">
                     <textarea class="commentaire" name="com" id="com" cols="70" rows="10" placeholder="Postez un avis ici..."></textarea>
-                    <button class="bouton-jaune" type="submit" class="poster">Soumettre</button>
-                </form>
-            </div>
+                    <!-- <input type="hidden" name="user_ID" value="<?php //echo $_SESSION['ID']?>"> -->
+                <button class="bouton-jaune" type="submit" class="poster">Soumettre</button>
+            </form>
+
+        <?php
+        } else {
+        ?>
+            <a href="./header.php#overlay">Je m'inscris</a>
+        <?php
+        }
+        ?>
 
         </div>
 
+    </div>
 
-    </body>
-
-    </html>
 
 <?php
 endwhile;

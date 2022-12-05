@@ -1,5 +1,13 @@
 <?php
 include './header.php';
+
+//check si erreur
+if (isset($_SESSION['msg'])) {
+    foreach($_SESSION['msg'] as $msg){
+        echo "<p class='message'>$msg</p>";
+    }
+    unset($_SESSION['msg']);
+}
 ?>
 
 <div id="accueil-slogo">
