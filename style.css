@@ -927,18 +927,18 @@ h2 {
   text-align: center;
 }
 
-.commentaire {
+.formulaire {
   display: block;
   margin: auto;
 }
 
 .bouton-jaune {
+  display: block;
   width: 10vw;
   background: #DCC12C;
   border: none;
   padding: 5px 5px;
-  margin-bottom: 5px;
-  margin: 30px 0 10px 0;
+  margin: 30px auto 10px;
   cursor: pointer;
   transition: all 0.6s ease;
 }
@@ -992,7 +992,7 @@ h2 {
   }
 
   .commentaire {
-    width: 50%;
+    width: 60%;
   }
 
 }
