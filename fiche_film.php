@@ -5,10 +5,6 @@ include './header.php';
 
 $id = $_GET['id'] ?? null;
 
-if (is_null($id)) {
-    // header('location: index.php');
-}
-
 $req = $pdo->prepare("SELECT * FROM films WHERE ID = :id ");
 $req->execute(['id' => (int)$id]);
 
