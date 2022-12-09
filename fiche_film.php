@@ -2,7 +2,6 @@
 require './database.php';
 include './header.php';
 
-
 $id = $_GET['id'] ?? null;
 
 $req = $pdo->prepare("SELECT * FROM films WHERE ID = :id ");
@@ -13,7 +12,6 @@ $data = $req->fetch(PDO::FETCH_OBJ);
 $affiche = "./img/" . $data->affiche;
 echo '<div class="container_fiche">
 <!--COLONNE DE GAUCHE, AFFICHE ET NOTE GENERALE DU FILM -->
-
             <div class="left">
                 <img class="affiche" src=' . $affiche . ' alt="affiche">
                 
@@ -24,9 +22,7 @@ echo '<div class="container_fiche">
             </div>
 <!-- COLONNE DE DROITE, TITRE ET INFOS DIVERSES -->
             <div class="right">
-
                 <h3 class="titre">' . $data->titre ?> </h3>
-
 
  <?php $original = $data->titre_original;
 
@@ -41,9 +37,7 @@ echo '<div class="left_bis">
                     <img class="affiche" src= ' . $affiche . ' alt="affiche">
                     <h4 class="box">
                         <i class="fa-solid fa-star"></i>
-                        <div class="note">'
-    . $data->note .
-    '</div>
+                        <div class="note">' . $data->note . '</div>
                     </h4>
                 </div>
 <!-- CONTAINER1 CORRESPOND AUX INFOS REALISATEUR, GENRE ETC DIVISÉ EN DEUX COLONNES LEFT1 ET RIGHT1  -->

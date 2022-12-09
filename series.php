@@ -13,7 +13,7 @@ include 'header.php';
 
         while ($data = $req->fetch()) {
 
-            echo '<a href="./fiche_film.php?id=' . $data->ID . '">
+            echo '<a href="./fiche_serie.php?id=' . $data->ID . '">
            <div class="grid-item">
                 <img src="./img/' . $data->affiche . '"alt="" height="260px" width="160px">
             </div>';
