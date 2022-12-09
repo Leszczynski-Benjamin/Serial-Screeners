@@ -1,21 +1,31 @@
 <?php
 require 'database.php';
 include 'header.php';
-echo '<div id="grid">';
+?>
 
-$req = $pdo->query("SELECT * FROM series ORDER BY id DESC");
-$data["films"] = $req->fetchAll();
 
-foreach ($data as $items) {
-    foreach ($items as $item) {
+<div class="containerSerieFilm">
+    <div id="grid">
 
-        echo '<div class="grid-item">
-                <img src="./img/' . $item->affiche . '"alt="" height="260px" width="160px">
+        <?php
+        $ID = isset($_GET['ID']);
+        $req = $pdo->query('SELECT * FROM series ORDER BY ID DESC');
+
+        while ($data = $req->fetch()) {
+
+            echo '<a href="./fiche_film.php?id=' . $data->ID . '">
+           <div class="grid-item">
+                <img src="./img/' . $data->affiche . '"alt="" height="260px" width="160px">
             </div>';
-    }
-}
-echo '</div>';
+        }
 
 
+
+        ?>
+
+    </div>
+</div>
+
+<?php
 
 include './footer.php';
