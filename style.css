@@ -1252,13 +1252,6 @@ h2 {
   margin-bottom: 5vh;
 }
 
-.containerFilmsSeries {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-top: 40px;
-}
-
 
 @media screen and (max-width: 769px) {
   .sub_film {

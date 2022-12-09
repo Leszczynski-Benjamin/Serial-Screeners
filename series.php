@@ -1,12 +1,10 @@
 <?php
 require 'database.php';
 include 'header.php';
-
-echo '<div class="containerFilmsSeries"';
 echo '<div id="grid">';
 
 $req = $pdo->query("SELECT * FROM series ORDER BY id DESC");
-$data["series"] = $req->fetchAll();
+$data["films"] = $req->fetchAll();
 
 foreach ($data as $items) {
     foreach ($items as $item) {
@@ -16,7 +14,6 @@ foreach ($data as $items) {
             </div>';
     }
 }
-echo '</div>';
 echo '</div>';
 
 
