@@ -22,6 +22,30 @@
         <?php
         require 'database.php';
         session_start();
+        if (isset($_SESSION['pseudo']) && $_SESSION['user_kind'] == 1) {
+            echo '  
+            <nav>
+                <a href="index.php" id="logo">Serial Screeners</a>
+                <div class="navLink">
+                    <ul class="navLink1">
+                        <li><a href="index.php" id="navLink_accueil">Accueil</a></li>
+                        <li><a href="series.php" id="navLink_series">Séries</a></li>
+                        <li><a href="films.php" id="navLink_films">Films</a></li>
+                        <li><a href="espace.php" id="navLink_monEspace">Mon espace</a></li>
+                        <li id="navLink_user" onclick="overlayUser()"><i class="fa-solid fa-user-large"></i></li>
+                        ' . '<span id="pseudoStyle">Salut ' . $_SESSION["pseudo"]  . '</span>
+            <ul id="overlay-user" class="overlay-user">
+                            <li><a href="deconnexion-exe.php" id="deco">Déconnexion</a></li>
+                            <li><a href="#" id="deco">Changer de mot de passe</a></li>
+                            <li><a href="#" id="deco">Se désinscrire</a></li>
+                            <li><a href="espace_admin.php" id="deco">Espace admin</a></li>
+                        </ul>
+                    </ul>
+                    </div>
+                </div>
+                </a><i class="fa-solid fa-bars" id="menuBurger"></i>
+            </nav> ';
+        }
         if (isset($_SESSION['pseudo'])) {
             echo '  
             <nav>
