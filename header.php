@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta description="Le site collaboratif qui répertorie les films et séries" content="série, télévision, films, cinéma, divertissement, culture, comédie, drame, thriller, action, horreur, JustWatch, blockbuster, imaginaire, caméra">
-    <link rel="icon" href="./serial screeners/img/favicon-256x256.png">
+    <link rel="icon" href="./img/favicon-256x256.png">
     <title>Serial Screeners</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/6d9b9bcbc0.js" crossorigin="anonymous"></script>
