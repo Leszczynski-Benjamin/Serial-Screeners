@@ -68,7 +68,8 @@ $affiche = "./img/" . $data->affiche;
                 <button class="button"><i class="fa-solid fa-circle-plus"></i> Ajouter à ma liste</button>
             </div>
             <div class="diffusion">
-                <a class="lien" href= ' . $data->diffusion ?> Où visionner cette série?</a>
+                <a class="lien" href= ' . $data->diffusion .'>Où visionner cette série?</a>'
+                ?>
                 
             </div>
         </div>
