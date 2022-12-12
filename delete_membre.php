@@ -9,5 +9,5 @@ $req = $pdo->prepare("DELETE FROM users WHERE ID = ?"); //La variable $req corre
 
 $req-> execute(array($id)); //L’instruction EXECUTE fait s’appliquer la variable $req
 
-header('location: ./update_membre.php'); //La fonction “exit” puis “header” ramène l’utilisateur sur la page “update_membre.php”
+exit(header('location: ./update_membre.php')) //La fonction “exit” puis “header” ramène l’utilisateur sur la page “update_membre.php”
 ?>

@@ -1,7 +1,7 @@
 <?php
 include './fonction.php';
 
-session_start();
+session_start(); //La fonction “session_start” est appelée ; elle démarre une nouvelle session ou reprend une session existante
 
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
