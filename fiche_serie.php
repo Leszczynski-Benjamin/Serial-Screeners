@@ -2,10 +2,13 @@
 require './database.php';
 include './header.php';
 
-$id = $_GET['id'] ?? null;
+$id = (empty($_GET["id"])) ? null : (int)htmlspecialchars($_GET['id']);
+
+if (is_null($id))
+    die('<meta http-equiv="refresh" content="0.1;URL=http://localhost/serial%20screeners/series.php">');
 
 $req = $pdo->prepare('SELECT * FROM series WHERE ID = :id');
-$req->execute(['id' => (int)$id]);
+$req->execute(['id' => $id]);
 
 $data = $req->fetch(PDO::FETCH_OBJ);
 
@@ -82,6 +85,8 @@ $affiche = "./img/" . $data->affiche;
         <?php if (isset($_SESSION['pseudo'])) { ?>
 
             <form action="./com-exe.php" method="post" class="formulaire">
+                <input type="hidden" name="serie_ID" value="<?= $id ?>">
+
                 <textarea class="commentaire" name="com" id="com" cols="70" rows="10" placeholder="Postez un avis ici..."></textarea>
                 <!-- <input type="hidden" name="user_ID" value="<?php //echo $_SESSION['ID']?>"> -->
                 <button class="bouton-jaune" type="submit" class="poster">Soumettre</button>
@@ -109,8 +114,8 @@ $affiche = "./img/" . $data->affiche;
 
 <?php
 
-$req = $pdo->query("SELECT avis.ID, avis.com, users.pseudo FROM avis INNER JOIN users ON avis.user_ID = users.ID");
-
+$req = $pdo->prepare("SELECT avis.ID, avis.com, users.pseudo FROM avis INNER JOIN users ON avis.user_ID = users.ID WHERE serie_ID = ?");
+$req->execute(array($id));
 while ($data = $req->fetch()){    
     echo "<tr> <td>$data->pseudo</td><td>$data->com</td>";
     echo "<td>";         

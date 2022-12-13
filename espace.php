@@ -15,7 +15,7 @@ include 'header.php';
     </ul>
     <ul id="sous-filtres">
         <li><a>Listes des programmes :</a></li>
-        <li><a>Vues (0)</a></li>
+        <li><a>Vus (0)</a></li>
         <li><a>À voir (0)</a></li>
     </ul>
     <div id="box-btn-submit">
