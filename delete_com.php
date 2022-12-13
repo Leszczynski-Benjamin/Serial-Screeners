@@ -9,6 +9,6 @@ $req = $pdo->prepare("DELETE FROM avis WHERE ID = ?");
 
 $req->execute(array($ID));
 
-exit(header('location: ./update.php'));
+exit(header('location: ./index.php'));
 
 ?>
