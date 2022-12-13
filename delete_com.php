@@ -1,7 +1,14 @@
 <?php
 session_start();
+require "./fonction.php";
 
-$ID =$_GET['ID'];
+if (!isAdmin())
+{
+    http_response_code(404);
+    die("404");
+}
+
+$ID = $_GET['ID'];
 
 require "./database.php";
 

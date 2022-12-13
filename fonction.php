@@ -15,3 +15,20 @@ function getRandName(int $offset)
     $charset = substr($charset, 0, $offset);
     return $charset;
 }
+
+
+function isAdmin(?string $redirectLink = null)
+{
+    if (session_status() === PHP_SESSION_NONE)
+        session_start();
+    
+    if (!isset($_SESSION["user_kind"]) || (int)$_SESSION["user_kind"] === 2)
+    {
+        if (!is_null($redirectLink))
+            header("location: $redirectLink");
+
+        return false;
+    }
+
+    return true;
+}
