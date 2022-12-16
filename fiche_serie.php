@@ -1,5 +1,6 @@
 <?php
 require './database.php';
+require './fonction.php';
 include './header.php';
 
 $id = (empty($_GET["id"])) ? null : (int)htmlspecialchars($_GET['id']);
@@ -105,28 +106,36 @@ $affiche = "./img/" . $data->affiche;
     </div>
 
 
-    <div>
+    <div class="com">
     <h2>Commentaires</h2>
     <table>
-        <tr> <th>Utilisateur</th> <th>Commentaire</th> </tr>
-
-</div>
-
+        <thead>
+            <tr>
+                <th>Utilisateur</th> 
+                <th>Commentaire</th> 
+            </tr>
+        </thead>
+        <tbody>
 <?php
 
 $req = $pdo->prepare("SELECT avis.ID, avis.com, users.pseudo FROM avis INNER JOIN users ON avis.user_ID = users.ID WHERE serie_ID = ?");
-$req->execute(array($id));
-while ($data = $req->fetch()){    
-    echo "<tr> <td>$data->pseudo</td><td>$data->com</td>";
-    echo "<td>";         
-    if(isset($_SESSION['user_kind']) && $_SESSION['user_kind'] == 1){
-        echo "<a href='./delete_com.php?ID=$data->ID'>Supprimer</a>";;    
-    echo "</td></tr>";
-
-}
-}
-
-  
- 
-?>
-</table>
+$req->execute([$id]);
+while ($data = $req->fetch()){  
+    ?>  
+    <tr>
+                        <td><?= $data->pseudo ?></td>
+                        <td><?= $data->com ?></td>
+                        <?= (isAdmin()) ? "<td><a href='./delete_com.php?ID=$data->ID'>Supprimer</a></td>" : ""; ?>
+                        <?php 
+                        /* ça équivaut à ça, syntaxe simplifiée sans le if et le echo
+                            if (isAdmin())
+                                echo "<td><a href='./delete_com.php?ID=$data->ID'>Supprimer</a></td>";
+                        */
+                        ?>
+                    </tr>
+                    <?php
+                }
+            ?>
+        </tbody>
+    </table>
+</div>

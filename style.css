@@ -1182,12 +1182,11 @@ h2 {
     padding: 2em 1em 0;
 
   }
+ /* pour les cases des formulaires create et update, le box sizing et le max width sont là pour avoir le textarea du synopsis qui soit responsive*/
 
-  .case2 {
-    /* pour les cases des formulaires create et update, le box sizing et le max width sont là pour avoir le textarea du synopsis qui soit responsive*/
+  .case2 {   
     display: block;
     margin: 1vh auto;
-
     box-sizing: border-box;
     max-width: 50%;
   }

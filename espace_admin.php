@@ -1,8 +1,13 @@
 <?php
 
 include 'header.php';
+require "./fonction.php";
 
-
+if (!isAdmin())
+{
+    http_response_code(404);
+    die("404");
+}
 
 echo '<h2 class="welcome">Bienvenue dans l\'espace administrateur ' . $_SESSION["pseudo"] .  '</h2>
 

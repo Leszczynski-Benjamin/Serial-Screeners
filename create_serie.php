@@ -1,6 +1,13 @@
 <?php
     include 'header.php';
     require 'database.php';
+    require "fonction.php";
+
+if (!isAdmin())
+{
+    http_response_code(404);
+    die("404");
+}
 
     ?>
 

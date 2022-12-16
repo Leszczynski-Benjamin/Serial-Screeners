@@ -2,6 +2,13 @@
 
 require "./database.php";
 include 'header.php';
+require "./fonction.php";
+
+if (!isAdmin())
+{
+    http_response_code(404);
+    die("404");
+}
 
 $ID = $_GET['ID'];
     if(!empty($_POST)){

@@ -13,11 +13,4 @@ $req = $pdo->prepare("INSERT INTO submit SET titre = ?, film_ou_serie = ?, genre
     $req->execute([$titre, $film_ou_serie, $genre, $sortie, $casting, $realisateur]);
         header('location: ./espace.php');
         exit();
-
-
-if(isset($errors)){
-    $_SESSION['erreur'] = $errors;
-    header('location: ./index.php');
-}
-
 ?>
