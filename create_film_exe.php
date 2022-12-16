@@ -45,11 +45,4 @@ require "./database.php";
 
         exit();
 }
-
-if(isset($errors)){
-    $_SESSION['erreur'] = $errors;
-    header('location: ./index.php');
-}
-
-
 ?>
