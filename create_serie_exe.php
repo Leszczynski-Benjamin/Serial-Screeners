@@ -45,10 +45,4 @@ $req->execute([$titre, $original, $genre, $synopsis, $showrunners, $casting, $de
 
     exit();
 }
-if(isset($errors)){
-$_SESSION['erreur'] = $errors;
-header('location: ./index.php');
-}
-
-
 ?>
